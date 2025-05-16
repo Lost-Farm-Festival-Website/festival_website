@@ -1,0 +1,20 @@
+---
+// Henter parametrene fra Astro.props
+const { htmlbodytext="p", size="medium", stylingclasses=""} = Astro.props; 
+const Htmlbodytext = htmlbodytext;
+ 
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
+const sizeClasses = {
+"xtra-large-bold": "text-2xl font-bold",
+"xtra-large-regular": "text-2xl",
+"large-bold": "text-xl font-bold",
+"large-regular": "text-xl",
+"medium-bold": "text-lg font-bold",
+"medium-regular": "text-lg",
+"small-bold": "text-base font-bold",
+"small-regular": "text-base",
+"xtra-small-bold": "text-sm font-bold",
+"xtra-small-regular": "text-sm",
+};
+---
+<Htmlbodytext class:list={[sizeClasses[size], "font-lora", stylingclasses]}><slot /></Htmlbodytext>

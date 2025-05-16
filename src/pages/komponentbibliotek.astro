@@ -1,0 +1,93 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Heading from "../components/typography/Heading.astro";
+import Display from "../components/typography/Display.astro";
+import Bodytext from "../components/typography/Bodytext.astro";
+import Link from "../components/typography/Link.astro";
+import Card from "../components/Card.astro";
+---
+<MainLayout title="Komponentbibliotek">
+
+    <!-- start på buttons -->
+    <section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Buttons</Heading>
+        <p><Button variant="filled-primary" size="desktop-regular">Variant filled primary desktop</Button></p>
+        <p><Button variant="outline-primary" size="desktop-regular">Variant outline primary desktop </Button></p>
+        <p><Button variant="filled-secondary" size="desktop-regular">Variant filled secondary desktop</Button></p>
+        <p><Button variant="outline-secondary" size="desktop-regular">Variant outline secondary desktop</Button></p>
+
+        <p><Button variant="filled-primary" size="mobile-small">Variant filled primary desktop</Button></p>
+        <p><Button variant="outline-primary" size="mobile-small">Variant outline primary desktop </Button></p>
+        <p><Button variant="filled-secondary" size="mobile-small">Variant filled secondary desktop</Button></p>
+        <p><Button variant="outline-secondary" size="mobile-small">Variant outline secondary desktop</Button></p>
+        <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på buttons -->
+    
+    <!-- start på link -->
+    <section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Links</Heading>
+        <p><Link>Default link</Link>er en del af tekst, og burde gerne fungere som et <Link>link</Link>i teksten</p>
+        <p><Link href="#" variant="header" size="large-bold">Variant Large bold link</Link></p>
+        <p><Link href="#" variant="header" size="medium-bold">Variant Medium bold link</Link></p>
+        <p><Link href="#"variant="header" size="small-bold">Variant Small bold link</Link></p>
+        <p><Link href="#" variant="body" size="xtra-large-regular">Variant Xtra large regular</Link></p>
+        <p><Link href="#" variant="body" size="large-regular">Variant Large regular</Link></p>
+        <p><Link href="#"variant="body" size="medium-regular">Variant Medium regular</Link></p>
+        <p><Link href="#" variant="body" size="small-regular">Variant Small regular</Link></p>
+        <p><Link href="#"variant="body" size="xtra-small-regular">Variant Xtra small regular</Link></p>
+        <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på link -->
+    
+    <!-- start på typografi -->
+    <section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Typografi</Heading>
+    
+    <Display htmldisplay="h1" size="display-web">Display web</Display>
+    <Display htmldisplay="h2" size="display-mobile">Display mobile</Display>
+    <br>
+    <Heading htmlheading="h3" size="xtra-large">h1 xtra large</Heading>
+    <Heading htmlheading="h4" size="large">h2 large</Heading>
+    <Heading htmlheading="h5" size="medium">h3 medium</Heading>
+    <Heading htmlheading="h6" size="small">h4 small</Heading>
+    <Heading htmlheading="h7" size="xtra-small">h5 xtra small</Heading><br>
+    <Heading htmlheading="h8" size="xtra-xtra-small">h6 xtra xtra small</Heading>
+    <br><br>
+    <Bodytext htmlheading="p" size="xtra-large-bold">Body text xtra large bold</Bodytext>
+    <Bodytext htmlheading="p" size="xtra-large-regular">Body text xtra large regular</Bodytext>
+    <Bodytext htmlheading="p" size="large-bold">Body text large bold</Bodytext>
+    <Bodytext htmlheading="p" size="large-regular">Body text large regular</Bodytext>
+    <Bodytext htmlheading="p" size="medium-bold">Body text medium bold</Bodytext>
+    <Bodytext htmlheading="p" size="medium-regular">Body text medium regular</Bodytext>
+    <Bodytext htmlheading="p" size="small-bold">Body text small bold</Bodytext>
+    <Bodytext htmlheading="p" size="small-regular">Body text small regular</Bodytext>
+    <Bodytext htmlheading="p" size="xtra-small-bold">Body text xtra small bold</Bodytext>
+    <Bodytext htmlheading="p" size="xtra-small-regular">Body text xtra small regular</Bodytext>
+
+    <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på typografi -->
+    
+    <!-- start på card -->
+    <section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Cards</Heading>
+    <div class="grid grid-cols-2 md:grid-gols-3 lg:grid-cols-4 gap-4">
+    <Card
+        url="/singleview"
+        cardimage="rose.jpg"
+        cardtitle="Rosé Chateau"
+        cardtekst="Rosévin som smager af solskin og gode stunder."
+        cardbuttontekst="Køb nu!"
+        badgenyt="true"
+        badgerabat="true"
+        badgefaatilbage="ture"
+    ></Card>
+    </div>
+    <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på card -->
+     </MainLayout>
+    
+    
