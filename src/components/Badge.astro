@@ -1,0 +1,23 @@
+---
+// Henter parametrene fra Astro.props
+const { variant = "primary", size = "medium" } = Astro.props;
+
+//Definer den styling, der gør sig gældende for alle knapper
+const badgeStyling = "font-bold font-montserrat px-3 py-[var(--spaceing-1-5)]"; 
+
+//Definer den styling, der gør sig gældende for de forskellige varianter 
+const variantClasses = {
+    "music": "bg-[var(--color-primary-50)] text-[var(--color-primary-900)]",
+    "art":  "bg-[var(--color-primary-200)] text-[var(--color-primary-900)]",
+    "talks":  "bg-[var(--color-primary-600)] text-[var(--color-primary-900)]",
+    "event":  "bg-[var(--color-primary-700)] text-[var(--color-primary-900)]",
+};
+
+//Definer den styling, der gør sig gældende for de forskelligeog størrelser.
+const sizeClasses = {
+"desktop-regular": "text-lg w-auto",
+"mobile-small": "text-heading_s w-auto",
+};
+---
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<span class:list={[badgeStyling, variantClasses[variant], sizeClasses[size]]}><slot /></span>
