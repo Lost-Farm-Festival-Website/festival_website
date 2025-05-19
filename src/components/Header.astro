@@ -18,17 +18,20 @@ import Button from "./Button.astro";
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </label>
-            <!-- Fullscreen Dropdown -->
-                <div class="fixed inset-0 w-screen h-screen bg-base-100 z-40 hidden peer-checked:grid grid-cols-1 md:grid-cols-2">
-                <!-- Image Column -->
-                <div class="hidden md:block bg-cover bg-center" style="background-image: url('/placeholder.png');"></div>
-            <!-- Navigation Column -->
-                    <div class="flex flex-col justify-center items-start p-10 space-y-4">
-                        <a href="/profile" class="text-lg font-semibold hover:underline">Profile</a>
-                        <a href="/settings" class="text-lg font-semibold hover:underline">Settings</a>
-                        <a href="/logout" class="text-lg font-semibold hover:underline">Logout</a>
+                <!-- Fullscreen Dropdown -->
+                <label for="user-menu-toggle" class="fixed inset-0 w-screen h-screen bg-base-100 z-40 hidden peer-checked:grid grid-cols-1 md:grid-cols-2 cursor-pointer">
+                    <!-- Image Column -->
+                    <div class="hidden md:block bg-cover bg-center" style="background-image: url('/public/Navigation_roma-kaiuk-z51SGO5m5ec-unsplash.webp');"></div>
+                    <!-- Navigation Column -->
+                    <div class="flex flex-col justify-center items-start p-10 space-y-4 bg-base-100">
+                        <a href="/program" class="text-lg font-semibold hover:underline">Explore the Program</a>
+                        <a href="/about" class="text-lg font-semibold hover:underline">Read About the Festival</a>
+                        <a href="/theme" class="text-lg font-semibold hover:underline">Lost Farm Festival Theme</a>
+                        <a href="/partners" class="text-lg font-semibold hover:underline">Funding & Partners</a>
+                        <a href="/practical" class="text-lg font-semibold hover:underline">Practical Information</a>
+                        <a href="/contact" class="text-lg font-semibold hover:underline">Contact</a>
                     </div>
-                </div>
+                </label>
             </div>
         </li>
     </ul>
