@@ -1,11 +1,30 @@
 ---
 import tailwindcss from "@tailwindcss/vite"
-import MainLayout from "../layouts/MainLayout.astro"
 import Display from "./typography/Display.astro"
 import Bodytext from "./typography/Bodytext.astro"
 ---
 
 <!-- Hero niveau 2 -->
-<MainLayout title="Hero-niveau-2">
-    <img src="" alt="Hero section niveau 2">
-</MainLayout>
+<section title="Hero-niveau-2">
+<!-- Image -->
+    <div class="p-0 w-screen max-w-none !ml-0  flex flex-col mb-8">
+      <img src="/placeholder.png" alt="Hero section niveau 2" class="w-screen h-[200px] md:h-[240px] lg:h-[240px] object-cover" />
+    </div>
+
+<!-- tekst -->
+    <div class="flex flex-col gap-5 mb-8">
+    <!-- Display Overskrift -->
+        <Display size="display-mobile" stylingclasses="md:text-8xl lg:text-8xl text-primary-500">
+            <slot name="display" />
+        </Display>
+
+    <!-- Bodytext aligned right -->
+    <div class="flex flex-col md:flex-row md:justify-end md:gap-8">
+        <div class="md:w-1/2"></div>
+        <div class="md:w-1/2 md:ml-20">
+            <Bodytext size="small-regular" class="md:text-2xl lg:text-2xl text-primary-500 mt-10">
+                <slot name="bodytext" />
+            </Bodytext>
+        </div>
+    </div>
+</section>
