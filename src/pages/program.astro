@@ -1,12 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero from "../components/Hero.astro"
+import Faq from "../components/Faq.astro"
 ---
 
 <MainLayout title="Program">
+    <section  class="bg-primary-900">
     <Hero>
     <img slot="image" src="/hero-program.webp" alt="solnedgang"  />
-    <span slot="display">Program</span> <!-- Program på amerikansk -->
+    <span slot="display">Festival Program</span> <!-- Program på amerikansk -->
     </Hero>
 
+<Faq />
+
+</section>
 </MainLayout>
