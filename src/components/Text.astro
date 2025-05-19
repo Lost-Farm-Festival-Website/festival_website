@@ -1,0 +1,59 @@
+---
+import tailwindcss from "@tailwindcss/vite"
+import Heading from "./typography/Heading.astro"
+import Bodytext from "./typography/Bodytext.astro"
+import Button from "./Button.astro"
+---
+<!-- Text-2cols -->
+  <!-- Overskrift -->
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">
+        <slot name="header" />
+</Heading>
+
+<!-- 2cols -->
+ <section title="Text-2cols">
+    <div class="flex flex-col md:flex-row md:justify-between md:gap-8">
+        <!-- Left bodytext + CTA -->
+        <div class="md:w-1/2 mb-10">
+            <Bodytext size="small-regular" stylingclasses="md:text-2xl lg:text-2xl text-primary-50">
+                <slot name="bodytext" />
+            </Bodytext>
+
+            <!-- CTAer -->
+            <div title="2cols-knapper" class="mt-5 md:mt-10 flex flex-col gap-4 md:flex-row md:gap-4">
+                <Button 
+                    variant="filled-primary" 
+                    size="mobile-regular md:desktop-regular"
+                >
+                    <slot name="filled-primary" />
+                </Button>
+                <Button 
+                    variant="outline-primary" 
+                    size="mobile-regular md:desktop-regular"
+                >
+                    <slot name="outline-primary" />
+                </Button>
+            </div>
+        </div>
+
+        <!-- right Image -->
+        <div class="md:w-1/2">
+            <slot name="image" /> 
+        </div>
+    </div>
+</section>
+
+
+<!-- INDSÆT SÅDAN HER PÅ HTML SIDEN
+   <Text>
+        <span slot="header">Festival Program</span>
+         <span slot="filled-primary">Læs mere</span>
+  <span slot="outline-primary">Kontakt os</span>
+  
+    <span slot="bodytext">On the 8-10. August 2025, we invite you to join the first LOST FARM FESTIVAL adventure. As part of a gathering of only a few hundred lostfarmers, in the unique landscape of Sjællands Odde, Denmark you will get the opportunity to experience over 30 acts and projects on an ambitious and independent festival that embraces experimenting and places the landscape, community, and art to the front.</span>
+         <img slot="image" src="/placeholder.png" alt="indsæt dit billede"  />
+    
+
+    </Text> 
+-->
+
