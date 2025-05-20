@@ -2,41 +2,62 @@
 import Heading from "./typography/Heading.astro"
 import Bodytext from "./typography/Bodytext.astro"
 ---
-<section aria-label="FAQ" class="max-w-2xl mx-auto px-4 py-8">
-    <Heading level={2} class="text-primary-50">Frequently Asked Questions</Heading>
-<div class="space-y-4">
-    <!-- FAQ Item -->
-    <details class="p-4">
-        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
-            Is there camping available?
-            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span> <!-- ▼ vises her -->
-        </summary>
-        <p class="mt-2 text-sm text-gray-700 text-primary-50">
-            Yes, camping is available for all ticket holders. Please check our website for details on camping areas and facilities.
-        </p>
-        <hr class="my-6 border-t border-primary-100" />
-    </details>
-
-    <details class="group border border-gray-300 rounded-lg p-4">
-        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
-            What food and drink options are available?
-            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span>
-        </summary>
-        <p class="mt-2 text-sm text-gray-700 text-primary-50">
-            We offer a variety of food trucks and stalls, including vegetarian and vegan options, as well as several bars serving drinks.
-        </p>
-    </details>
-
-    <details class="group border border-gray-300 rounded-lg p-4">
-        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
-            Can I volunteer at the festival?
-            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span>
-        </summary>
-        <p class="mt-2 text-sm text-gray-700 text-primary-50">
-            Absolutely! We welcome volunteers. Please visit our volunteer page to learn more and sign up.
-        </p>
-    </details>
-</div>
+<section aria-label="FAQ" class="">
+    <Heading size="medium" stylingclasses="font-semibold md:text-5xl lg:text-5xl text-primary-50 md:mb-5 mb-2">Frequently Asked Questions</Heading>
 </section>
 
+<section class="divide-y border-t border-b border-gray-300 text-primary-50">
+  <!-- spørgsmål 1 -->
+  <div class="collapse collapse-arrow">
+    <input type="radio" name="faq-accordion" />
+     <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> Is there camping available? </Heading>
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
+      Yes, camping is available at the festival. There are designated camping areas with facilities for tents and campers. Please check our website for details on booking and camping guidelines.
+    </Bodytext>
+  </div>
+
+    <!-- spørgsmål 2 -->
+  <div class="collapse collapse-arrow">
+    <input type="radio" name="faq-accordion" />
+     <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> What food and drink options are available?</Heading>
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
+      Yes, camping is available at the festival. There are designated camping areas with facilities for tents and campers. Please check our website for details on booking and camping guidelines.
+    </Bodytext>
+  </div>
+
+      <!-- spørgsmål 3 -->
+  <div class="collapse collapse-arrow">
+    <input type="radio" name="faq-accordion" />
+     <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> What kind of toilet facilities are available?    </Heading>
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
+      Clean and accessible toilet facilities, including accessible toilets for people with disabilities, are available throughout the festival area.
+    </Bodytext>
+  </div>
+
+      <!-- spørgsmål 4 -->
+  <div class="collapse collapse-arrow">
+    <input type="radio" name="faq-accordion" />
+     <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> Can I Park at the festival?   </Heading>
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
+      Yes, there is parking available near the festival grounds. Please follow the signs and instructions from staff for designated parking areas.
+    </Bodytext>
+  </div>
+
+      <!-- spørgsmål 5 -->
+  <div class="collapse collapse-arrow">
+    <input type="radio" name="faq-accordion" />
+    <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> Can I volunteer at the festival?</Heading>
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
+      Yes, we welcome volunteers! Pleaseread more information on how to sign up and the benefits of volunteering at the festival.
+    </Bodytext>
+  </div>
 </section>
+
+
+
+
+
+
+
+
+
