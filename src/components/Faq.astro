@@ -1,0 +1,42 @@
+---
+import Heading from "./typography/Heading.astro"
+import Bodytext from "./typography/Bodytext.astro"
+---
+<section aria-label="FAQ" class="max-w-2xl mx-auto px-4 py-8">
+    <Heading level={2} class="text-primary-50">Frequently Asked Questions</Heading>
+<div class="space-y-4">
+    <!-- FAQ Item -->
+    <details class="p-4">
+        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
+            Is there camping available?
+            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span> <!-- ▼ vises her -->
+        </summary>
+        <p class="mt-2 text-sm text-gray-700 text-primary-50">
+            Yes, camping is available for all ticket holders. Please check our website for details on camping areas and facilities.
+        </p>
+        <hr class="my-6 border-t border-primary-100" />
+    </details>
+
+    <details class="group border border-gray-300 rounded-lg p-4">
+        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
+            What food and drink options are available?
+            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span>
+        </summary>
+        <p class="mt-2 text-sm text-gray-700 text-primary-50">
+            We offer a variety of food trucks and stalls, including vegetarian and vegan options, as well as several bars serving drinks.
+        </p>
+    </details>
+
+    <details class="group border border-gray-300 rounded-lg p-4">
+        <summary class="flex justify-between items-center cursor-pointer text-primary-700 font-semibold text-primary-50">
+            Can I volunteer at the festival?
+            <span class="transition-transform group-open:rotate-180 text-primary-50">&#9660;</span>
+        </summary>
+        <p class="mt-2 text-sm text-gray-700 text-primary-50">
+            Absolutely! We welcome volunteers. Please visit our volunteer page to learn more and sign up.
+        </p>
+    </details>
+</div>
+</section>
+
+</section>

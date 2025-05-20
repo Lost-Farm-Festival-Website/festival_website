@@ -1,0 +1,51 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/typography/Heading.astro";
+import Bodytext from "../components/typography/Bodytext.astro";
+---
+
+<MainLayout>
+<section title="artist">
+<a href="/program" class="flex items-center mb-4">
+    <img src="/back-icon.svg" alt="Tilbage" class="h-6 w-6 mr-2" />
+</a>
+<!-- Heading -->
+    <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">Dis Fig ft. Spooky J</Heading>
+
+    <!-- 2 cols -->
+    <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+        <!-- Left Image -->
+        <img src="/artist-placeholder.webp" alt="artist billede" class="w-full md:w-1/2" />
+        
+        <!-- Right column: text and icons -->
+        <div class="w-full md:w-1/2 flex flex-col">
+            <!-- Bodytext -->
+            <Bodytext size="small-regular" stylingclasses="text-primary-50 text-base md:text-lg" >
+                Dis Fig channels raw emotional intensity through voice, movement, and sonic ritual—blending beauty and chaos in equal measure. Joined by Spooky-J, she presents a powerful new live show shaped during her 2024 CTM residency. <br> <br>
+                Resisting simple categorization, Dis Fig's sound defines the music industry's conventions, incorporating synthetic brass sections, flutes, and piles of quiet moments that either shatter or balance her landscape of raw intensity.
+            </Bodytext>
+
+            <!-- Icons under bodytext -->
+            <div class="flex flex-row gap-8 mt-8">
+                <div class="flex items-center gap-2">
+                    <img src="/tid-icon.svg" alt="tid" class="w-6 h-6" />
+                    <Heading size="xtra-xtra-small" stylingclasses="text-primary-50 md:text-lg">kl.20:00</Heading>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="/sted-icon.svg" alt="sted" class="w-6 h-6" />
+                    <Heading size="xtra-xtra-small" stylingclasses="text-primary-50 md:text-lg">Scene 1</Heading>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="/genre-icon.svg" alt="genre" class="w-6 h-6" />
+                    <Heading size="xtra-xtra-small" stylingclasses="text-primary-50 md:text-lg">Pop</Heading>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</MainLayout>
+
+
+
+
