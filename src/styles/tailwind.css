@@ -3,8 +3,6 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-@plugin "daisyui";
-
 @theme {
   /* colors */
   --color-primary-50: #ffebf6;
