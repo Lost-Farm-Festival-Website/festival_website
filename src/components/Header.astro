@@ -9,15 +9,43 @@ import Button from "./Button.astro";
     <nav class="flex-none">
         <ul class="menu menu-horizontal px-1 flex items-center gap-2">
             <!-- Buy Ticket Button -->
-            <li class="p-0"><Button primary={true}>Buy Ticket</Button></li>
+            <li >
+            <Button
+                variant="filled-primary" 
+                size="mobile-regular md:desktop-regular" > Buy Ticket 
+        </Button>
+            
+            </li>
         <li class="p-0">
             <div class="relative">
-                <input type="checkbox" id="user-menu-toggle" class="hidden peer" />
-                <label for="user-menu-toggle" class="btn btn-ghost btn-circle m-1 cursor-pointer flex items-center justify-center">
+             <!--    <input type="checkbox" id="user-menu-toggle" class="hidden peer" />
+                <label for="user-menu-toggle" class="cursor-pointer flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-content" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path stroke-linecap="hover" stroke-linejoin="hover" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
+                </label> -->
+
+                <input type="checkbox" id="user-menu-toggle" class="hidden peer" />
+
+                <label for="user-menu-toggle" class="cursor-pointer flex items-center justify-center">
+                  <!-- Burgermenu -->
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       class="h-6 w-6 stroke-base-content peer-checked:hidden"
+                       fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                
+                  <!-- Kryds -->
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       class="h-6 w-6 hidden peer-checked:block stroke-primary-50"
+                       fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </label>
+                
+
                 <!-- Fullscreen Dropdown -->
                 <label for="user-menu-toggle" class="fixed inset-0 w-screen h-screen bg-base-100 z-40 hidden peer-checked:grid grid-cols-1 md:grid-cols-2 cursor-pointer">
                     <!-- Image Column -->
