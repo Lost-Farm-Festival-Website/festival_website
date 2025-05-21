@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import Hero from "../components/Hero.astro"
+import Heading from "../components/typography/Heading.astro"
+---
+
+<MainLayout>
+<Hero>
+    <img slot="image" src="../partners-hero.webp" alt="indsæt dit billede" class="w-full h-auto" />
+    <span slot="display">Funding & Partners</span>
+    <span slot="bodytext">Lost Farm Festival wouldn’t be possible without the support of our amazing partners and funders. 
+        Their trust, energy, and commitment make it possible for us to dream big and create something truly special.
+        <br><br> We are deeply grateful — thanks to them, Lost Farm Festival can grow, connect, and inspire.</span>
+</Hero>
+
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Meet our Partners</Heading> 
+<!-- meet our partners -->   
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-center justify-items-center md:h-24 md:w-auto h-16 w-auto" >
+    <img src="../partner.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner1.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner2.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner3.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner4.svg" alt="partner lorem" class="max-h-24 w-auto" />
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-center justify-items-center md:h-24 md:w-auto h-16 w-auto" >
+    <img src="../partner.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner4.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner2.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner1.svg" alt="partner lorem" class="max-h-24 w-auto" />
+    <img src="../partner3.svg" alt="partner lorem" class="max-h-24 w-auto" />
+</div>
+</MainLayout>

@@ -1,0 +1,70 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import Heading from "../components/typography/Heading.astro"
+import Button from "../components/Button.astro"
+import Bodytext from "../components/typography/Bodytext.astro"
+import Faq from "../components/Faq.astro"
+---
+
+<MainLayout> 
+<!-- Heading -->
+<section id="heading-practical">
+    <!-- Heading -->
+    <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">Practical information</Heading>
+</section>
+
+<!-- Practical information -->
+<section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
+    <div class="w-full md:w-1/2">
+        <img src="../kortskalændres.png" alt="kort over Lost farm festival" class="w-full h-auto" />
+    </div>
+    <div class="w-full md:w-1/2 flex items-center">
+        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500">
+            Lost Farm Festival takes place from August 8-10, 2025, at Lost Farm HQ in Yderby, 
+            a small hamlet surrounded by beautiful fields and the sea. The festival site opens on Friday, August 8th at 12:00 noon, with the program starting shortly after. 
+            The festival concludes on Sunday, August 10th at 11:00 PM, and the campsite closes by 12:00 noon on Monday, August 11th. <br><br> Nearby, you’ll find Havnebyen (Harbour Town), 
+            just a 20-minute walk or a 5-minute bike ride away. On Saturday, the town will host a special fishing competition in collaboration with the Mackrel Master, turning 
+            the harbour into a lively sea of festivities. <br><br> NB: Space is limited. We only have room for 350 participants, and we therefore encourage you to buy your ticket now.
+        </Bodytext>
+    </div>
+</section>
+
+<!-- Tickets and transport -->
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Tickets & Transports</Heading>
+<section id="transport" class="flex flex-col md:flex-row gap-8 items-start">
+    <div class="md:w-1/2">
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col items-center">
+        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500 mb-10 md:mb-20">
+            Here the berries are extra sweet and the apple's freshness makes you weep, the animals are friendly as long you are friendly to them and the grass is just a little greener.
+            Once you’ve have been here, you’ll know why!<br><br> To join the three-day adventure, buy your ticket for 950 DKK. For those traveling from Copenhagen, you can take THE LOST 
+            FARM BUS for 300 DKK (schedule to be announced). Public buses are also available from the Jutland Ferry to Out of Town.
+            Camping is free at The Field next to the festival site.
+        </Bodytext>
+        <!-- CTAer -->
+        <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5 md:mb-20 mb-10">
+            <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button>
+            <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Book Transport</Button>
+        </div>
+    </div>
+</section>
+
+<!-- Camping & Accommodation --> 
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Camping & Accommodation</Heading>
+<section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
+    <div class="w-full md:w-1/2">
+      <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500">
+            We want you to enjoy all three days of the festival with us. Free tent camping is available at The Field, just next to Lost Farm HQ. We ask that you leave large party 
+            tents and loud sound systems at home and opt for a modest-sized tent to share with the birds and nature. <br><br> While we encourage Lostfarmers to enjoy themselves, 
+            please respect your fellow festival-goers, the local wildlife, and the surrounding land. Limited camper van tickets will be available closer to the festival, with more
+             information to follow. There are also plenty of other options in the area if you prefer.
+        </Bodytext>  
+    </div>
+    <div class="w-full md:w-1/2 flex items-center">
+        <img src="../kortskalændres.png" alt="kort over Lost farm festival" class="w-full h-auto" />  
+    </div>
+</section>
+
+<!-- FAQ -->
+<Faq />
+</MainLayout>
