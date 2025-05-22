@@ -4,9 +4,10 @@ import Hero2 from "../components/Hero2.astro"
 import Heading from "../components/typography/Heading.astro"
 import Card_Artist from "../components/Card_artist.astro"
 
+/* Artist array = data source. more flexiable and maintable kode. Makes it possible to implement filter */
 const artists = [
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist1.png",
     title: "Dis Fig ft. Spooky J",
     stage: "Scene 1",
@@ -16,7 +17,7 @@ const artists = [
     badgeText: "Music",
   },
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist2.png",
     title: "Fatal Waves",
     stage: "By the harbour",
@@ -26,7 +27,7 @@ const artists = [
     badgeText: "Talks",
   },
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist3.png",
     title: "Croquies Collective",
     stage: "On the field",
@@ -36,7 +37,7 @@ const artists = [
     badgeText: "Event",
   },
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist4.png",
     title: "Safe house",
     stage: "Scene 3",
@@ -46,7 +47,7 @@ const artists = [
     badgeText: "Art",
   },
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist5.png",
     title: "SIKSA",
     stage: "Scene 1",
@@ -56,7 +57,7 @@ const artists = [
     badgeText: "Music",
   },
   {
-    url: "/singleview",
+    url: "/singlepage",
     image: "/artist2.png",
     title: "Circles of light",
     stage: "On the field",
@@ -69,23 +70,29 @@ const artists = [
 ---
 
 <MainLayout title="Program">
+<!-- Start Heading -->
+<Hero2 
+    image="/hero-program.webp"
+    alt="Festival Program"
+    display="Festival Program"
+/>
+<!-- Slut Heading -->
 
-    <Hero2 
-        image="/hero-program.webp"
-        alt="Festival Program"
-        display="Festival Program"
-    />
 
-    <section id="filter" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-        <button type="button" class="filter-button" data-filter="all">All</button>
-        <button type="button" class="filter-button" data-filter="music">Friday (Music)</button>
-        <button type="button" class="filter-button" data-filter="event">Saturday (Event)</button>
-        <button type="button" class="filter-button" data-filter="art">Sunday (Art)</button>
-    </section>
+<!--Start Filter function -->
+<section id="filter" class="flex gap-4 mb-8">
+  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="all"> All </button>
+  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="music"> Friday </button>
+  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="event"> Saturday </button>
+  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="art"> Sunday </button>
+</section>
+<!-- Slut Filter function -->
 
-    <section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid">
+
+<!-- card section til mappeing af data til komponent & til filter funktion. Handels the collection of cards -->
+<section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid md:mb-20 mb-10">
         {artists.map(artist => (
-            <div class="artist-card" data-badge={artist.badgeVariant}>
+            <a href={artist.url} class="artist-card" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
                 <Card_Artist
                     url={artist.url}
                     image={artist.image}
@@ -96,27 +103,32 @@ const artists = [
                     badgeVariant={artist.badgeVariant}
                     badgeText={artist.badgeText}
                 />
-            </div>
+            </a>
         ))}
-    </section>
+</section>
+<!-- Card section slut -->
 
-    <script type="module" is:inline>
-        const buttons = document.querySelectorAll('.filter-button');
-        const cards = document.querySelectorAll('.artist-card');
+<!-- Script til at filter i badges -->
+ <script type="module" is:inline>
+  const buttons = document.querySelectorAll('.filter-button');
+  const cards = document.querySelectorAll('.artist-card');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
 
-                cards.forEach(card => {
-                    const badge = card.getAttribute('data-badge');
-                    if (filter === 'all' || badge === filter) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+      // Filter cards
+      cards.forEach(card => {
+        const badge = card.getAttribute('data-badge');
+        card.style.display = (filter === 'all' || badge === filter) ? '' : 'none';
+      });
+
+      // Update active button styles
+      buttons.forEach(btn => btn.classList.remove('text-primary-500', 'underline'));
+      button.classList.add('text-primary-500', 'underline');
+    });
+  });
+</script>
+<!-- slut Script til at filter i badges -->
+
 </MainLayout>

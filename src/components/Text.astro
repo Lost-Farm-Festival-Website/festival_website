@@ -3,12 +3,12 @@ import Heading from "./typography/Heading.astro"
 import Bodytext from "./typography/Bodytext.astro"
 import Button from "./Button.astro"
 
-const { bodytext, btn_filled_text, btn_outline_text, image } = Astro.props;
+const { heading, bodytext, btn_filled_text, btn_outline_text, image } = Astro.props;
 ---
 <!-- Text-2cols -->
   <!-- Overskrift -->
 <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">
-     <slot name="header" />
+     {heading}
 </Heading>
 
 <!-- 2cols -->
