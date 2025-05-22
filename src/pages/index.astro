@@ -10,9 +10,23 @@ import Display from "../components/typography/Display.astro";
 ---
 <MainLayout title="Forside">
 
-<Display htmldisplay="h2" size="display-mobile">Art - Music - Talks & Performances</Display>
+<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl" >Art - Music - Talks & Performances</Display>
 
-    
+
+<div style="display: flex; justify-content: flex-end">
+  <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
+  <Bodytext htmlheading="p" size="small-bold">Sjællands Odde Denmark</Bodytext>
+</div>
+<img src="hero-forside.webp" alt="hero image med blomster" style="w-full h-full object-cover mb-8">
+
+<div class="text-primary-50">
+<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
+</div>
+
+<div class="mb-8 flex justify-center" >
+<Button variant="outline-primary" size="mobile-small">Explore Program</Button>
+</div>
+
 
 
 </MainLayout>
