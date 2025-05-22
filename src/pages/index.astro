@@ -5,24 +5,14 @@ import Link from "../components/typography/Link.astro";
 import TicketCard from "../components/TicketCard.astro";
 import Heading from "../components/typography/Heading.astro";
 import Bodytext from "../components/typography/Bodytext.astro";
+import Display from "../components/typography/Display.astro";
 
 ---
-<MainLayout title="Titel">
+<MainLayout title="Forside">
+
+<Display htmldisplay="h2" size="display-mobile">Art - Music - Talks & Performances</Display>
 
     
-    <TicketCard 
-      title="3-days Ticket"
-      description="Adgang til en ekThis ticket gives access to 3 days of art, music, and performances."
-      price="950 DKK"
-      buttonText="Buy Ticket"
-    />
-    
-    <TicketCard 
-      title="VIP Child Ticket 3 year+"
-      description="This ticket is valid for children 3-13 years old accompanied by an adult and gives access to 3 days of art, music, and performances."
-      price="400 DKK"
-      buttonText="Buy Ticket"
-    />
-    
+
 
 </MainLayout>
