@@ -1,11 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Link from "../components/typography/Link.astro";
-import TicketCard from "../components/TicketCard.astro";
 import Heading from "../components/typography/Heading.astro";
 import Bodytext from "../components/typography/Bodytext.astro";
 import Display from "../components/typography/Display.astro";
+import Text from "../components/Text.astro";
 
 ---
 <MainLayout title="Forside">
@@ -24,9 +23,18 @@ import Display from "../components/typography/Display.astro";
 </div>
 
 <div class="mb-8 flex justify-center" >
-<Button variant="outline-primary" size="mobile-small">Explore Program</Button>
+<Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
 </div>
 
+
+<Heading htmlheading="h5" size="medium" stylingclasses="md:text-1xl" >What is Lost Farm Festival</Heading>
+<Text
+image="img src='/placeholder.png' alt='indsæt dit billede"
+bodytext="Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands odde." 
+btn_filled_text= "Buy Ticket"
+btn_outline_text="Explore Program" 
+
+/>
 
 
 </MainLayout>
