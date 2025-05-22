@@ -1,27 +1,20 @@
 ---
-// Props til fleksibilitet
-const {
-  title = "Titel",
-  description = "Indhold",
-  price = "X DKK",
-  buttonText = "Buy Ticket",
-} = Astro.props;
-
 import Button from "./Button.astro";
 import Heading from "./typography/Heading.astro";
 import Bodytext from "./typography/Bodytext.astro";
+const {title, description, price, buttonText,} = Astro.props;
 ---
 
-<div class="p-6 md:max-w-[600px] md:w-[600px]  bg-neutral-50/50 text-primary-500">
-  <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl mb-4">
+<div class="p-6 min-h-64 md:min-w-[650px] md:min-h-80 bg-neutral-50/50 ">
+  <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl mb-4 mt-4 text-primary-500">
     {title}
   </Heading>
 
-  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mb-4">
+  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:min-w-[550px] mb-4 text-primary-500">
     {description}
   </Bodytext>  
 
-  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mb-4 ">
+  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:min-w-[550px] mb-4 text-primary-500 ">
     {price}
   </Bodytext>  
 
