@@ -4,7 +4,7 @@ import Heading from "../components/typography/Heading.astro"
 import Button from "../components/Button.astro"
 import Bodytext from "../components/typography/Bodytext.astro"
 import Faq from "../components/Faq.astro"
-
+import Hero2 from "../components/Hero2.astro"
 
 // FAQ data array 
 /* Smart fordi: consistent, cleaner og nemmere at vedligeholde da man undgår at skulle gentage komponent, men bare kan tilføjes i array */
@@ -32,14 +32,22 @@ const faqs = [
   }
 ];
 ---
----
+
 
 <MainLayout> 
+<!-- start Hero -->
+<Hero2
+    display="Practical information"
+    image="/partners-hero.webp"
+    class="mb-10"
+    />
+<!-- slut Hero -->
+
+<!-- SLETTET - Givet samme hero som andre niveau 2 sider -->
 <!-- Heading -->
-<section id="heading-practical">
-    <!-- Heading -->
+<!-- <section id="heading-practical">
     <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">Practical information</Heading>
-</section>
+</section> -->
 
 <!-- start Practical information -->
 <section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
