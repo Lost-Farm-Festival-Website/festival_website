@@ -2,6 +2,8 @@
 import Heading from "./typography/Heading.astro"
 import Bodytext from "./typography/Bodytext.astro"
 import Button from "./Button.astro"
+
+const { bodytext, btn_filled_text, btn_outline_text, image } = Astro.props;
 ---
 <!-- Text-2cols -->
   <!-- Overskrift -->
@@ -14,24 +16,24 @@ import Button from "./Button.astro"
     <div class="flex flex-col md:flex-row md:justify-between md:gap-8">
     <!-- venstre bodytext + CTA -->
         <div class="md:w-1/2 mb-10">
-            <Bodytext size="small-regular" stylingclasses="md:text-2xl lg:text-2xl text-primary-50">
-                <slot name="bodytext" />
+            <Bodytext size="small-regular" stylingclasses="md:text-2xl leading-relaxed">
+                {bodytext}
             </Bodytext>
 
             <!-- CTAer -->
             <div title="2cols-knapper" class="mt-5 md:mt-10 flex flex-col gap-4 md:flex-row md:gap-4">
                 <Button variant="filled-primary" size="mobile-regular md:desktop-regular">
-                    <slot name="filled-primary" />
+                    {btn_filled_text}
                 </Button>
                 <Button variant="outline-primary" size="mobile-regular md:desktop-regular">
-                    <slot name="outline-primary" />
+                    {btn_outline_text}
                 </Button>
             </div>
         </div>
 
     <!-- højre Image -->
         <div class="md:w-1/2">
-            <slot name="image" /> 
+            {image}
         </div>
     </div>
 </section>
