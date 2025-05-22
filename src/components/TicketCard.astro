@@ -13,19 +13,19 @@ import Bodytext from "./typography/Bodytext.astro";
 ---
 
 <div class="p-6 md:max-w-[600px] md:w-[600px]  bg-neutral-50/50 text-primary-500">
-  <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl">
+  <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl mb-4">
     {title}
   </Heading>
 
-  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mt-4">
+  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mb-4">
     {description}
   </Bodytext>  
 
-  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mt-4">
+  <Bodytext htmlBodytext="p" size="small" stylingclasses="md:text-lg md:w-[550px] mb-4 ">
     {price}
   </Bodytext>  
 
-  <div class="mt-4">
+  <div class="">
     <Button variant="filled-primary" size="mobile-regular md:desktop-regular">
       {buttonText}
     </Button>
