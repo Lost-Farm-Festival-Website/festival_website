@@ -1,31 +1,122 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero2 from "../components/Hero2.astro"
+import Heading from "../components/typography/Heading.astro"
 import Card_Artist from "../components/Card_artist.astro"
+
+const artists = [
+  {
+    url: "/singleview",
+    image: "/artist1.png",
+    title: "Dis Fig ft. Spooky J",
+    stage: "Scene 1",
+    genre: "Electronic",
+    time: "kl.20:30",
+    badgeVariant: "music",
+    badgeText: "Music",
+  },
+  {
+    url: "/singleview",
+    image: "/artist2.png",
+    title: "Fatal Waves",
+    stage: "By the harbour",
+    genre: "Art",
+    time: "kl.16:00",
+    badgeVariant: "talks",
+    badgeText: "Talks",
+  },
+  {
+    url: "/singleview",
+    image: "/artist3.png",
+    title: "Croquies Collective",
+    stage: "On the field",
+    genre: "Event",
+    time: "kl.12:00",
+    badgeVariant: "event",
+    badgeText: "Event",
+  },
+  {
+    url: "/singleview",
+    image: "/artist4.png",
+    title: "Safe house",
+    stage: "Scene 3",
+    genre: "Drawing",
+    time: "kl.10:00",
+    badgeVariant: "art",
+    badgeText: "Art",
+  },
+  {
+    url: "/singleview",
+    image: "/artist5.png",
+    title: "SIKSA",
+    stage: "Scene 1",
+    genre: "Art",
+    time: "kl.22:00",
+    badgeVariant: "music",
+    badgeText: "Music",
+  },
+  {
+    url: "/singleview",
+    image: "/artist2.png",
+    title: "Circles of light",
+    stage: "On the field",
+    genre: "Art",
+    time: "kl.12:00",
+    badgeVariant: "art",
+    badgeText: "Art",
+  },
+];
 ---
 
 <MainLayout title="Program">
-<!-- Hero niveau 2 start -->
+
     <Hero2 
-    image="/hero-program.webp"
-    alt="Festival Program"
-    display="Festival Program"
+        image="/hero-program.webp"
+        alt="Festival Program"
+        display="Festival Program"
     />
-<!-- Hero niveau 2 slut -->
 
-<!-- start filter i dag -->
-<!-- start filter i dag -->
+    <section id="filter" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <button type="button" class="filter-button" data-filter="all">All</button>
+        <button type="button" class="filter-button" data-filter="music">Friday (Music)</button>
+        <button type="button" class="filter-button" data-filter="event">Saturday (Event)</button>
+        <button type="button" class="filter-button" data-filter="art">Sunday (Art)</button>
+    </section>
 
-<!-- Start Artister oversigt -->
-<Card_Artist
- url="/singleview"
-        cardimage="rose.jpg"
-        cardtitle="Rosé Chateau"
-        cardtekst="Rosévin som smager af solskin og gode stunder."
-        cardbuttontekst="Køb nu!"
-        badgenyt="true"
-        badgerabat="true"
-        badgefaatilbage="ture"/>
-<!-- Start Artister oversigt -->
- 
+    <section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid">
+        {artists.map(artist => (
+            <div class="artist-card" data-badge={artist.badgeVariant}>
+                <Card_Artist
+                    url={artist.url}
+                    image={artist.image}
+                    title={artist.title}
+                    stage={artist.stage}
+                    genre={artist.genre}
+                    time={artist.time}
+                    badgeVariant={artist.badgeVariant}
+                    badgeText={artist.badgeText}
+                />
+            </div>
+        ))}
+    </section>
+
+    <script type="module" is:inline>
+        const buttons = document.querySelectorAll('.filter-button');
+        const cards = document.querySelectorAll('.artist-card');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const badge = card.getAttribute('data-badge');
+                    if (filter === 'all' || badge === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </MainLayout>
