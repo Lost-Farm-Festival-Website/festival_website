@@ -24,8 +24,8 @@ const { title } = Astro.props;
 			<Header></Header>
 		</header>
 		
-		<main class="mx-6 lg:mx-12">
-			<slot />
+		<main class="bg-no-repeat bg-cover bg-primary-900" style="background-image: url('/baggrund.svg');">
+			<slot class="mx-6 lg:mx-12" />
 		</main>
 
 		<footer>
