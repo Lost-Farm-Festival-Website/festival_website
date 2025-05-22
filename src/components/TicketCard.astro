@@ -1,0 +1,16 @@
+---
+import Button from "./Button.astro"
+import Heading from "./typography/Heading.astro"
+import Bodytext from "./typography/Bodytext.astro"
+---
+
+<div class="card bg-neutral-50/50 w-[600px] h-[300px] lineheight-1/2 !rounded-none">
+    <div class="card-body text-primary-500">
+    <Heading level={2} class="card-title ">Lorem ipsum dolar</Heading>
+      <Bodytext>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit</Bodytext>
+      <Bodytext>xxxx DKK</Bodytext>
+      <div class="card-actions">
+        <Button variant="filled-primary" size="mobile-regular md:desktop-regular">Buy Ticket</Button>
+      </div>
+    </div>
+</div>
