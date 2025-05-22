@@ -1,16 +1,31 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import Hero from "../components/Hero.astro"
-import Faq from "../components/Faq.astro"
 import Hero2 from "../components/Hero2.astro"
+import Card_Artist from "../components/Card_artist.astro"
 ---
 
 <MainLayout title="Program">
-    <section  class="">
-        <Hero2 
-        image="/hero-program.webp"
-        alt="Festival Program"
-        display="Festival Program"
-        />
-    </section>
+<!-- Hero niveau 2 start -->
+    <Hero2 
+    image="/hero-program.webp"
+    alt="Festival Program"
+    display="Festival Program"
+    />
+<!-- Hero niveau 2 slut -->
+
+<!-- start filter i dag -->
+<!-- start filter i dag -->
+
+<!-- Start Artister oversigt -->
+<Card_Artist
+ url="/singleview"
+        cardimage="rose.jpg"
+        cardtitle="Rosé Chateau"
+        cardtekst="Rosévin som smager af solskin og gode stunder."
+        cardbuttontekst="Køb nu!"
+        badgenyt="true"
+        badgerabat="true"
+        badgefaatilbage="ture"/>
+<!-- Start Artister oversigt -->
+ 
 </MainLayout>

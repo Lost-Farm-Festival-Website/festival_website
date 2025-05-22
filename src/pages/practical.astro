@@ -4,6 +4,34 @@ import Heading from "../components/typography/Heading.astro"
 import Button from "../components/Button.astro"
 import Bodytext from "../components/typography/Bodytext.astro"
 import Faq from "../components/Faq.astro"
+
+
+// FAQ data array 
+/* Smart fordi: consistent, cleaner og nemmere at vedligeholde da man undgår at skulle gentage komponent, men bare kan tilføjes i array */
+const faqs = [
+  {
+    heading: "Frequently Asked Questions",
+    smallheading: "Is there camping available?",
+    bodytext: "Yes, free tent camping is available at The Field, right next to Lost Farm HQ. We encourage you to bring a modest-sized tent and enjoy the full festival experience. Please be considerate of fellow guests and the environment. Limited camper van tickets will be available closer to the festival."
+  },
+  {
+    smallheading: "What food and drink options are available?",
+    bodytext: "A variety of delicious food and drink options will be available at the festival, including vegetarian and vegan choices. You’ll find local vendors offering meals, snacks, and beverages throughout the event. Please note that bringing your own alcohol onto the festival site is not permitted, but you are welcome to enjoy your own food and drinks at the campsite."
+  },
+  {
+    smallheading: "What kind of toilet facilities are available?",
+    bodytext: "We provide clean and well-maintained toilet facilities, including standard portable toilets and accessible options. Hand-washing stations will be available throughout the festival site. Please help us keep the facilities tidy for everyone by using the bins provided and reporting any issues to our staff."
+  },
+  {
+    smallheading: "Can I park at the festival?",
+    bodytext: "Yes, there is limited parking available near the festival site. We encourage carpooling whenever possible, as parking spaces are allocated on a first-come, first-served basis. Please follow the signs and directions from our parking staff upon arrival. Overnight parking is allowed for festival guests."
+  },
+  {
+    smallheading: "Can I volunteer at the festival?",
+    bodytext: "Absolutely! We welcome volunteers to help make Lost Farm Festival a wonderful experience for everyone. If you’re interested in volunteering, please reach out to us via our website or social media. Volunteers receive a free ticket and meals during their shifts. We look forward to hearing from you!"
+  }
+];
+---
 ---
 
 <MainLayout> 
@@ -13,13 +41,13 @@ import Faq from "../components/Faq.astro"
     <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">Practical information</Heading>
 </section>
 
-<!-- Practical information -->
+<!-- start Practical information -->
 <section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
     <div class="w-full md:w-1/2">
         <img src="../kortskalændres.png" alt="kort over Lost farm festival" class="w-full h-auto" />
     </div>
-    <div class="w-full md:w-1/2 flex items-center">
-        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500">
+    <div class="w-full md:w-1/2 flex items-center md:mb-20 mb-20">
+        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500 ">
             Lost Farm Festival takes place from August 8-10, 2025, at Lost Farm HQ in Yderby, 
             a small hamlet surrounded by beautiful fields and the sea. The festival site opens on Friday, August 8th at 12:00 noon, with the program starting shortly after. 
             The festival concludes on Sunday, August 10th at 11:00 PM, and the campsite closes by 12:00 noon on Monday, August 11th. <br><br> Nearby, you’ll find Havnebyen (Harbour Town), 
@@ -28,14 +56,15 @@ import Faq from "../components/Faq.astro"
         </Bodytext>
     </div>
 </section>
+<!-- slut Practical information -->
 
-<!-- Tickets and transport -->
+<!-- start Tickets and transport -->
 <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Tickets & Transports</Heading>
 <section id="transport" class="flex flex-col md:flex-row gap-8 items-start">
     <div class="md:w-1/2">
     </div>
-    <div class="w-full md:w-1/2 flex flex-col items-center">
-        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500 mb-10 md:mb-20">
+    <div class="w-full md:w-1/2 flex flex-col items-center mb-10 md:mb-20">
+        <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500">
             Here the berries are extra sweet and the apple's freshness makes you weep, the animals are friendly as long you are friendly to them and the grass is just a little greener.
             Once you’ve have been here, you’ll know why!<br><br> To join the three-day adventure, buy your ticket for 950 DKK. For those traveling from Copenhagen, you can take THE LOST 
             FARM BUS for 300 DKK (schedule to be announced). Public buses are also available from the Jutland Ferry to Out of Town.
@@ -48,8 +77,10 @@ import Faq from "../components/Faq.astro"
         </div>
     </div>
 </section>
+<!-- slut Tickets and transport -->
 
-<!-- Camping & Accommodation --> 
+
+<!-- start Camping & Accommodation --> 
 <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Camping & Accommodation</Heading>
 <section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
     <div class="w-full md:w-1/2">
@@ -60,15 +91,22 @@ import Faq from "../components/Faq.astro"
              information to follow. There are also plenty of other options in the area if you prefer.
         </Bodytext>  
     </div>
-    <div class="w-full md:w-1/2 flex items-center">
+    <div class="w-full md:w-1/2 flex items-center md:mb-20 mb-10">
         <img src="../kortskalændres.png" alt="kort over Lost farm festival" class="w-full h-auto" />  
     </div>
 </section>
+<!-- slut Camping & Accommodation --> 
 
-<!-- FAQ -->
-<Faq
-heading="hej" 
-smallheading="goddag"
-bodytext="tschuss" />
+<!-- start FAQ -->
+{faqs.map((faq, i) => (
+  <Faq 
+    heading={i === 0 ? faq.heading : undefined}
+    smallheading={faq.smallheading}
+    bodytext={faq.bodytext}
+  />
+))}
+<!-- slut FAQ -->
+
+
 
 </MainLayout>

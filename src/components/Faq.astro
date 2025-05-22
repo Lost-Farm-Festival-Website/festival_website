@@ -5,16 +5,21 @@ import Bodytext from "./typography/Bodytext.astro"
 const { heading, smallheading, bodytext, } = Astro.props;
 ---
 <section aria-label="FAQ" class="">
-    <Heading size="medium" stylingclasses="font-semibold md:text-5xl lg:text-5xl text-primary-50 md:mb-5 mb-2">{heading}</Heading>
+    <Heading size="medium" stylingclasses="font-semibold md:text-5xl md:mb-5 mb-2">{heading}</Heading>
 </section>
 
-<section class="divide-y border-t border-b border-gray-300 text-primary-50">
+<section class="border-b border-primary-50">
   <!-- Start spørgsmål -->
   <div class="collapse collapse-arrow">
     <input type="radio" name="faq-accordion" />
-     <Heading htmlheading="h3" size="small" stylingclasses="md:text-3xl collapse-title after:text-primary-700"> {smallheading}</Heading>
-    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]">
-      {bodytext} </Bodytext>
+
+     <Heading htmlheading="h3" size="small" stylingclasses="md:text-2xl collapse-title after:text-primary-700"> <!-- after=farven på pilen --> 
+      {smallheading}
+    </Heading>
+
+    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]"> <!-- leading-relaxed er linje afstand -->
+      {bodytext} 
+    </Bodytext>
   </div>
   <!-- slut spørgsmål -->
 </section>
