@@ -9,15 +9,17 @@ import Text from "../components/Text.astro";
 ---
 <MainLayout title="Forside">
 
+ 
 <Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl" >Art - Music - Talks & Performances</Display>
-
 
 <div style="display: flex; justify-content: flex-end">
   <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
   <Bodytext htmlheading="p" size="small-bold">Sjællands Odde Denmark</Bodytext>
 </div>
-<img src="hero-forside.webp" alt="hero image med blomster" style="w-full h-full object-cover mb-8">
 
+<div class="w-screen -mx-[50vw] left-1/2 relative mb-10 md:mb-20">
+  <img src="hero-forside.webp" alt="hero image med blomster" class="h-[200px] md:h-[240px] w-full object-cover" />
+</div>
 <div class="text-primary-50">
 <Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
 </div>
@@ -29,7 +31,7 @@ import Text from "../components/Text.astro";
 
 <Heading htmlheading="h5" size="medium" stylingclasses="md:text-1xl" >What is Lost Farm Festival</Heading>
 <Text
-image="img src='/placeholder.png' alt='indsæt dit billede"
+image="image:/artist1.png, alt='indsæt dit billede"
 bodytext="Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands odde." 
 btn_filled_text= "Buy Ticket"
 btn_outline_text="Explore Program" 
