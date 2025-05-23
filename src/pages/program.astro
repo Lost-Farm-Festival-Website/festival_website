@@ -66,6 +66,66 @@ const artists = [
     badgeVariant: "art",
     badgeText: "Art",
   },
+    {
+    url: "/singlepage",
+    image: "/artist1.png",
+    title: "Dis Fig ft. Spooky J",
+    stage: "Scene 1",
+    genre: "Electronic",
+    time: "kl. 20:30",
+    badgeVariant: "music",
+    badgeText: "Music",
+  },
+  {
+    url: "/singlepage",
+    image: "/artist2.png",
+    title: "Fatal Waves",
+    stage: "By the harbour",
+    genre: "Art",
+    time: "kl. 16:00",
+    badgeVariant: "talks",
+    badgeText: "Talks",
+  },
+  {
+    url: "/singlepage",
+    image: "/artist3.png",
+    title: "Croquies Collective",
+    stage: "On the field",
+    genre: "Event",
+    time: "kl. 12:00",
+    badgeVariant: "event",
+    badgeText: "Event",
+  },
+  {
+    url: "/singlepage",
+    image: "/artist4.png",
+    title: "Safe house",
+    stage: "Scene 3",
+    genre: "Drawing",
+    time: "kl. 10:00",
+    badgeVariant: "art",
+    badgeText: "Art",
+  },
+  {
+    url: "/singlepage",
+    image: "/artist5.png",
+    title: "SIKSA",
+    stage: "Scene 1",
+    genre: "Art",
+    time: "kl. 22:00",
+    badgeVariant: "music",
+    badgeText: "Music",
+  },
+  {
+    url: "/singlepage",
+    image: "/artist2.png",
+    title: "Circles of light",
+    stage: "On the field",
+    genre: "Art",
+    time: "kl. 12:00",
+    badgeVariant: "art",
+    badgeText: "Art",
+  },
 ];
 ---
 
@@ -80,7 +140,7 @@ const artists = [
 
 
 <!--Start Filter function -->
-<section id="filter" class="flex gap-4 mb-8">
+<section id="filter" class="flex gap-4 mb-5 md:mb-10">
   <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="all"> All </button>
   <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="music"> Friday </button>
   <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline" data-filter="event"> Saturday </button>
@@ -90,7 +150,7 @@ const artists = [
 
 
 <!-- card section til mappeing af data til komponent & til filter funktion. Handels the collection of cards -->
-<section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid md:mb-20 mb-10">
+<section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid md:mb-28 mb-10">
         {artists.map(artist => (
             <a href={artist.url} class="artist-card" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
                 <Card_Artist

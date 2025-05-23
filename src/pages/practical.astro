@@ -43,18 +43,12 @@ const faqs = [
     />
 <!-- slut Hero -->
 
-<!-- SLETTET - Givet samme hero som andre niveau 2 sider -->
-<!-- Heading -->
-<!-- <section id="heading-practical">
-    <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 md:mb-20 mb-10">Practical information</Heading>
-</section> -->
-
 <!-- start Practical information -->
-<section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start md:mb-20">
+<section id="practical-info" class="flex flex-col md:flex-row gap-8 items-start mb-10 md:mb-28">
     <div class="w-full md:w-1/2">
         <img src="../kortskalændres.png" alt="kort over Lost farm festival" class="w-full h-auto" />
     </div>
-    <div class="w-full md:w-1/2 flex items-center md:mb-20 mb-20">
+    <div class="w-full md:w-1/2 flex items-center md:mb-28 mb-10">
         <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500 ">
             Lost Farm Festival takes place from August 8-10, 2025, at Lost Farm HQ in Yderby, 
             a small hamlet surrounded by beautiful fields and the sea. The festival site opens on Friday, August 8th at 12:00 noon, with the program starting shortly after. 
@@ -106,6 +100,7 @@ const faqs = [
 <!-- slut Camping & Accommodation --> 
 
 <!-- start FAQ -->
+<section id="Faq" class="mb-10 md:mb-28">
 {faqs.map((faq, i) => (
   <Faq 
     heading={i === 0 ? faq.heading : undefined}
@@ -113,6 +108,7 @@ const faqs = [
     bodytext={faq.bodytext}
   />
 ))}
+</section>
 <!-- slut FAQ -->
 
 
