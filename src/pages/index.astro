@@ -8,24 +8,20 @@ import Display from "../components/typography/Display.astro";
 <MainLayout title="Forside">
 
 <!-- Hero --> 
-<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl" >Art - Music - Talks & Performances</Display>
-
-<div style="display: flex; justify-content: flex-end">
-  <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
-  <Bodytext htmlheading="p" size="small-bold">Sjællands Odde Denmark</Bodytext>
-</div>
-
-<div class="w-screen -mx-[50vw] left-1/2 relative mb-10 md:mb-20">
-  <img src="hero-forside.webp" alt="hero image med blomster" class="h-[200px] md:h-[240px] w-full object-cover" />
-</div>
-<div class="text-primary-50">
-<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
-</div>
-
-<div class="mb-8 flex justify-center" >
-<Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
-</div>
-
+<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl text-primary-500" >Art - Music - Talks & Performances</Display>
+  <div style="display: flex; justify-content: flex-end">
+    <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
+    <Bodytext htmlheading="p" size="small-bold">Sjællands Odde Denmark</Bodytext>
+  </div>
+  <div class="w-screen -mx-[50vw] left-1/2 relative mb-10 md:mb-20">
+    <img src="hero-forside.webp" alt="hero image med blomster" class="h-[200px] md:h-[240px] w-full object-cover" />
+  </div>
+  <div class="text-primary-50">
+    <Display size="display-mobile" stylingclasses="text-primary-50 mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
+  </div>
+  <div class="mb-8 flex justify-center" >
+    <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+  </div>
 <!-- Hero sult --> 
 
 <!-- start what is Lost Farm Festival -->
@@ -49,6 +45,4 @@ import Display from "../components/typography/Display.astro";
   </div>
 </section>
 <!-- slut what is Lost Farm Festival -->
-
-
 </MainLayout>
