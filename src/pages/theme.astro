@@ -1,0 +1,48 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Heading from "../components/typography/Heading.astro";
+import Bodytext from "../components/typography/Bodytext.astro";
+import Display from "../components/typography/Display.astro";
+import Hero2 from "../components/Hero2.astro";
+---
+
+<MainLayout title="Theme">
+
+<!-- start hero -->
+<div class="mb-10 md:mb-28">
+    <Hero2 
+        image="/hero_theme.webp"
+        display="Lost Farm Festival Theme"
+        bodytext="The theme for Lost Farm Festival 2025, Dark Skies – Brighter Light, celebrates the contrasts of our world through a program co-created with artists, locals, and the landscape. This journey through diverse energies invites Lostfarmers to explore the complexities of our shared existence while moving through the wild beauty of the natural surroundings." 
+        />
+</div>
+<!-- slut hero -->
+
+
+<!-- start section 2--> 
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">An Adventure Through Art and Sound</Heading>
+    <section id="practical-info" class="flex flex-col md:flex-row gap-16 items-start md:mb-28">
+        <div class="w-full md:w-1/2">
+            <div class="">
+                <Bodytext size="small-regular" class="md:text-xl lg:text-xl">
+                        From hyper-pop parties that pulse with energy to intimate plant meditations and saunagus, the program offers a flow of unexpected contrasts. Experience everything from outdoor nudejazz and nu-metal to hardcore bass performances that tap into the rhythms of our collective hearts. <br><br>
+                        This year, we encourage cultural companions to share stories from the margins, celebrating joy as an act of resistance. As we stumble through traditional lamentations at dawn, we seek to deepen human connection through the power of live art. And of course, we invite you to have a lot of fun along the way!        
+                </Bodytext>
+            </div>
+            <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5">
+                <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button>
+                <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+            </div>
+        </div>
+      
+        <div class="w-full md:w-1/2 text-center md:mb-20 mb-10 mt-5 md:mt-20">
+            <Heading size="xtra-small" stylingclasses="text-primary-500 pb-4 ">"I’m drawn to contrasts and how emotions like joy, rage, humor, and sadness coexist. Through Dark Skies  & <br> Brighter Light (...)"</Heading>
+            <Bodytext size="small-regular" stylingclasses="text-primary-500 text-right">Jude Bennett<br>Head of Program</Bodytext>
+        </div>
+    </section>
+<!-- slut section 2--> 
+
+
+
+</MainLayout>
