@@ -8,24 +8,20 @@ import Display from "../components/typography/Display.astro";
 <MainLayout title="Forside">
 
 <!-- Hero --> 
-<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl" >Art - Music - Talks & Performances</Display>
-
-<div style="display: flex; justify-content: flex-end">
-  <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
-  <Bodytext htmlheading="p" size="small-bold">Sjællands Odde Denmark</Bodytext>
-</div>
-
-<div class="w-screen -mx-[50vw] left-1/2 relative mb-10 md:mb-20">
-  <img src="hero-forside.webp" alt="hero image med blomster" class="h-[200px] md:h-[240px] w-full object-cover" />
-</div>
-<div class="text-primary-50">
-<Display htmldisplay="h2" size="display-mobile" stylingclasses="mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
-</div>
-
-<div class="mb-8 flex justify-center" >
-<Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
-</div>
-
+<Display size="display-mobile" stylingclasses="md:mb-20 mb-10 md:text-8xl text-primary-500" >Art - Music - Talks & Performances</Display>
+  <div style="display: flex; justify-content: flex-end">
+    <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
+    <Bodytext size="small-bold">Sjællands Odde Denmark</Bodytext>
+  </div>
+  <div class="w-screen -mx-[50vw] left-1/2 relative mb-5 md:mb-10">
+    <img src="hero-forside.webp" alt="hero image med blomster" class="h-[200px] md:h-[240px] w-full object-cover" />
+  </div>
+  <div class="text-primary-50">
+    <Display size="display-mobile" stylingclasses="text-primary-50 mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
+  </div>
+  <div class="flex justify-center md:mb-20 mb-10" >
+    <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+  </div>
 <!-- Hero sult --> 
 
 <!-- start what is Lost Farm Festival -->
@@ -36,19 +32,16 @@ import Display from "../components/typography/Display.astro";
       <img src="../placeholder.png" alt="placeholder billede" class="w-full h-auto" />
   </div>
   <div class="w-full md:w-1/2 flex flex-col items-center mb-10 md:mb-20">
-      <Bodytext size="small-regular" class="md:text-xl lg:text-xl text-primary-500">
+      <Bodytext size="small-regular" class="md:text-xl lg:text-xl">
         Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
         Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
         This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands odde.
       </Bodytext>
-
-       <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5 md:mb-20 mb-10">
+       <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5">
           <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button>
           <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
       </div>
   </div>
 </section>
 <!-- slut what is Lost Farm Festival -->
-
-
 </MainLayout>
