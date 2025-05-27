@@ -1,68 +1,78 @@
 ---
 import Button from "./Button.astro";
-import Heading from "./typography/Heading.astro"
+import Heading from "./typography/Heading.astro";
 ---
 
 <header class="flex items-center justify-between px-4 py-2 bg-primary-900">
-<!-- Logo -->
+  <!-- Logo -->
   <a href="/" class="flex-none">
     <img src="/lost-logo.svg" alt="Lost Logo" class="h-30 w-30 inline-block" />
   </a>
-
-<!-- Navigation -->
-  <nav class="flex-none ">
-    <ul class="menu menu-horizontal flex items-center gap-4">
-<!-- Buy Ticket Button -->
+  <!-- Navigation -->
+  <nav class="flex-none">
+    <ul class="flex items-center gap-4">
+      <!-- Buy Ticket Button -->
       <li>
-        <Button variant="filled-primary" size="mobile-regular md:desktop-regular">
+        <Button href="/tickets" variant="filled-primary" size="small md:desktop-regular">
           Buy Ticket
         </Button>
       </li>
-<!-- Burgermenu -->
-    <li class="p-4">
-     <div class="relative">
-<!-- Checkbox Toggle -->
-        <input type="checkbox" id="user-menu-toggle" class="hidden peer" />
-<!-- Burger / Cross Icon -->
-    <label for="user-menu-toggle" class="z-50 cursor-pointer flex items-center justify-center relative ">
-<!-- Burgermenu -->
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 class="h-6 w-6 stroke-base-content peer-checked:hidden stroke-primary-50"
-                 fill="none"  stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="none" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!-- Kryds virker ikke!!! -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 hidden peer-checked:block stroke-primary-50"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="none" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </label>
-<!-- Fullscreen Menu (styret af peer) -->
-          <div class="fixed inset-0 w-screen h-screen bg-primary-900 z-40 hidden peer-checked:grid grid-cols-1 md:grid-cols-2">
+
+      <!-- Burger Menu -->
+      <li class="p-4">
+        <div class="relative flex items-center">
+          <!-- Checkbox Toggle -->
+          <input type="checkbox" id="user-menu-toggle" class="hidden peer" />
+
+          <!-- Clickable Label -->
+          <label for="user-menu-toggle" class="z-50 cursor-pointer block w-8 h-8 relative"></label>
+
+          <!-- Burger Icon -->
+          <svg class="pointer-events-none absolute w-8 h-8 text-primary-50 transition-opacity duration-300 ease-in-out opacity-100 peer-checked:opacity-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Cross Icon (always visible in fullscreen menu) -->
+          <svg class="pointer-events-none absolute w-8 h-8 text-primary-50 transition-opacity duration-300 ease-in-out opacity-0 peer-checked:opacity-100 md:peer-checked:opacity-100 md:peer-checked:pointer-events-auto md:peer-checked:static md:peer-checked:ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+
+          <!-- Fullscreen Menu with smooth slide animation -->
+          <div class="fixed inset-0 w-screen h-screen bg-primary-900 z-40 pointer-events-none peer-checked:pointer-events-auto transition-transform duration-500 ease-in-out transform translate-x-full peer-checked:translate-x-0 grid-cols-1 md:grid-cols-2 grid hidden peer-checked:grid">
+            <!-- Cross Icon inside fullscreen menu (visible on all screens) -->
+            <div class="absolute top-6 right-6 z-50">
+              <label for="user-menu-toggle" class="cursor-pointer block">
+                <svg class="w-10 h-10 text-primary-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </label>
+            </div>
             <!-- Image Column -->
             <div class="hidden md:block bg-cover bg-center" style="background-image: url('/public/Navigation_roma-kaiuk-z51SGO5m5ec-unsplash.webp');"></div>
 
             <!-- Navigation Column -->
             <div class="flex flex-col justify-center items-start p-10 space-y-4 bg-primary-900 text-primary-50">
-                <a href="/program" class="hover:underline hover:text-primary-500">
-                    <Heading size="small" class="md:text-lg lg:text-lg">Explore the Program</Heading>
-                </a>
-                <a href="/about" class="hover:underline hover:text-primary-500">
-                    <Heading level={3} class="font-semibold text-lg">Read About the Festival</Heading>
-                </a>
-                <a href="/theme" class="hover:underline hover:text-primary-500">
-                    <Heading level={3} class="font-semibold text-lg">Lost Farm Festival Theme</Heading>
-                </a>
-                <a href="/partners" class="hover:underline hover:text-primary-500">
-                    <Heading level={3} class="font-semibold text-lg">Funding & Partners</Heading>
-                </a>
-                <a href="/practical" class="hover:underline hover:text-primary-500">
-                    <Heading level={3} class="font-semibold text-lg">Practical Information</Heading>
-                </a>
-                <a href="/contact" class="hover:underline hover:text-primary-500">
-                    <Heading level={3} class="font-semibold text-lg">Contact</Heading>
-                </a>
+             
+              <a href="/tickets" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-2 hover:text-primary-500">Buy Ticket</Heading>
+              </a>
+              <a href="/program" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-2 hover:text-primary-500">Explore the Program</Heading>
+              </a>
+              <a href="/about" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-2 hover:text-primary-500">Read About the Festival</Heading>
+              </a>
+              <a href="/theme" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-2 hover:text-primary-500">Lost Farm Festival Theme</Heading>
+              </a>
+              <a href="/partners" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-2 hover:text-primary-500">Funding & Partners</Heading>
+              </a>
+              <a href="/practical" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-4xl md:mb-10 hover:text-primary-500">Practical Information</Heading>
+              </a>
+              <a href="/contact" class="hover:underline hover:text-primary-500">
+                <Heading size="small" stylingclasses="md:text-2xl hover:text-primary-500 ">Contact</Heading>
+              </a>
             </div>
           </div>
         </div>
