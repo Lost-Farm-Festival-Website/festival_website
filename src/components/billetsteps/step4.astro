@@ -1,0 +1,33 @@
+---
+import Heading from "../typography/Heading.astro";
+import Bodytext from "../typography/Bodytext.astro";
+import Button from "../Button.astro"
+---
+<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Card information</Heading>
+<!-- Card info start -->
+<section>
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Card number</Bodytext>
+    <input type="text" placeholder="xxxx xxxx xxxx xxxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>  
+  </div>
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">CVC</Bodytext>
+    <input type="email" placeholder="xxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
+  </div>
+<!-- Card info end -->
+
+<!-- Summery start -->
+<section class="mb-20">
+  <Heading size="xtra-small">Order Summery</Heading>
+  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
+  <div class="flex gap-6">
+      <div onclick="goToStep(5)">
+          <p><Button variant="filled-primary" size="mobile-small">Place order</Button></p>
+      </div>
+      <div onclick="goToStep(3)">
+          <p><Button variant="outline-primary" size="mobile-small">Go Back</Button></p>
+      </div>
+  </div>
+</section>
+</div>
+<!-- Summary end -->

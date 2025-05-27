@@ -1,0 +1,66 @@
+---
+import Heading from "../typography/Heading.astro";
+import Bodytext from "../typography/Bodytext.astro";
+import Button from "../Button.astro"
+---
+<!-- 3 Day ticket start -->
+<section class="mb-20">
+    <div class="pb-5">  
+      <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">3 Days ticket</Heading>
+      <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">Enjoy three unforgettable days of creativity and culture.</Bodytext>
+    </div>
+
+    <div class="flex items-center gap-2">
+        <Bodytext size="medium-regular">Price: </Bodytext>
+        <Heading size="xtra-xtra-small"> 900 DKK</Heading>
+    </div>
+    <div class="flex items-center justify-between w-full">
+        <Bodytext size="xtra-small-regular">Ticket fee 59 DKK</Bodytext>
+        
+    <div class="flex items-center">
+          <button onclick="adjustCount('ticket-3days', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+          <span id="ticket-3days-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+          <button onclick="adjustCount('ticket-3days', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+    </div>
+</section>
+<!-- 3 Day ticket end -->
+
+<!-- Child ticket start -->
+<section class="mb-20">
+  <div class="pb-5">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Child Ticket 3 Year+</Heading>
+    <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">Valid for children aged 3 to 13 when accompanied by an adult. Grants full access to all festival areas, events, and camping.</Bodytext>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 400 DKK</Heading>
+  </div>
+  <div class="flex items-center justify-between w-full">
+      <Bodytext size="xtra-small-regular">Ticket fee 29 DKK</Bodytext>
+      
+  <div class="flex items-center">
+        <button onclick="adjustCount('ticket-child', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+        <span id="ticket-child-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+        <button onclick="adjustCount('ticket-child', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+  </div>
+</section>
+<!-- Child ticket end -->
+
+<!-- Summary start -->
+<section class="mb-20">
+  <Heading size="xtra-small">Order Summery</Heading>
+  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
+  <div onclick="goToStep(2)">
+      <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+  </div>
+</section>
+<!-- Summery end -->
+
+<script>
+  function adjustCount(id, delta) {
+    const el = document.getElementById(`${id}-count`);
+    const current = parseInt(el.textContent);
+    el.textContent = Math.max(0, current + delta);
+  }
+</script>

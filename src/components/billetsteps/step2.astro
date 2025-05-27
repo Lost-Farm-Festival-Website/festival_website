@@ -1,0 +1,126 @@
+---
+import Heading from "../typography/Heading.astro";
+import Bodytext from "../typography/Bodytext.astro";
+import Button from "../Button.astro"
+---
+<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Additional Purchase</Heading>
+<!-- Bus ticket start -->
+<section class="mb-20">
+  <div class="pb-5">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Bus Ticket – Copenhagen ⇄ Festival</Heading>
+    <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">If you purchase tickets for additional guests, please indicate the total number here.</Bodytext>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 300 DKK</Heading>
+      
+      <div class="flex items-center ml-auto">
+            <button onclick="adjustCount('ticket-bus', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+            <span id="ticket-bus-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+            <button onclick="adjustCount('ticket-bus', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+      </div>
+  </div>
+</section>
+<!-- Bus ticket end -->
+
+<!-- Add refund start -->
+<section class="mb-20">
+  <div class="pb-2">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Add Refund</Heading>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 63 DKK</Heading>
+      
+      <div class="flex items-center ml-auto">
+            <button onclick="adjustCount('ticket-refund', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+            <span id="ticket-refund-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+            <button onclick="adjustCount('ticket-refund', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+      </div>
+  </div>
+</section>
+<!-- Add refund end -->
+ 
+<!-- Reminder start -->
+<section class="mb-20">
+  <div class="pb-2">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Receive an event reminder </Heading>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 15 DKK</Heading>
+      
+      <div class="flex items-center ml-auto">
+            <button onclick="adjustCount('ticket-reminder', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+            <span id="ticket-reminder-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+            <button onclick="adjustCount('ticket-reminder', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+      </div>
+  </div>
+</section>
+<!-- Reminder end -->
+
+<!-- SMS ticket start -->
+<section class="mb-20">
+  <div class="pb-2">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Get your ticket SMS</Heading>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 10 DKK</Heading>
+      
+      <div class="flex items-center ml-auto">
+            <button onclick="adjustCount('ticket-sms', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+            <span id="ticket-sms-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+            <button onclick="adjustCount('ticket-sms', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+      </div>
+  </div>
+</section>
+<!-- SMS ticket end -->
+
+<!-- Camping start -->
+<section class="mb-20">
+  <div class="pb-5">  
+    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Camping on site</Heading>
+    <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">This information is for the festival organizers to give them an overview of the expected number of camping guests.</Bodytext>
+  </div>
+
+  <div class="flex items-center gap-2">
+      <Bodytext size="medium-regular">Price: </Bodytext>
+      <Heading size="xtra-xtra-small"> 0 DKK</Heading>
+      
+      <div class="flex items-center ml-auto">
+            <button onclick="adjustCount('ticket-camping', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+            <span id="ticket-camping-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+            <button onclick="adjustCount('ticket-camping', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+      </div>
+  </div>
+</section>
+<!-- Camping end -->
+
+<!-- Summery start -->
+<section class="mb-20">
+  <Heading size="xtra-small">Order Summery</Heading>
+  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
+  <div class="flex gap-6">
+      <div onclick="goToStep(3)">
+          <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+      </div>
+      <div onclick="goToStep(1)">
+          <p><Button variant="outline-primary" size="mobile-small">Go Back</Button></p>
+      </div>
+  </div>
+</section>
+</div>
+<!-- Summary end -->
+
+<script>
+  function adjustCount(id, delta) {
+    const el = document.getElementById(`${id}-count`);
+    const current = parseInt(el.textContent);
+    el.textContent = Math.max(0, current + delta);
+  }
+</script>
