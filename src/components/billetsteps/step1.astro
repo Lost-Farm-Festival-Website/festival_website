@@ -1,66 +1,138 @@
 ---
 import Heading from "../typography/Heading.astro";
 import Bodytext from "../typography/Bodytext.astro";
-import Button from "../Button.astro"
+import Button from "../Button.astro";
 ---
-<!-- 3 Day ticket start -->
-<section class="mb-20">
-    <div class="pb-5">  
-      <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">3 Days ticket</Heading>
-      <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">Enjoy three unforgettable days of creativity and culture.</Bodytext>
-    </div>
+<div class="grid grid-cols-1 md:grid-cols-2 md:gap-28">
+  <!-- Left side (ticket selection) -->
+  <div>
+    <Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Festival Tickets</Heading>
+    <!-- 3 Day ticket start -->
+    <section class="mb-20">
+      <div class="pb-5">
+        <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">3 Days ticket</Heading>
+        <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">
+          Enjoy three unforgettable days of creativity and culture.
+        </Bodytext>
+      </div>
 
-    <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2">
         <Bodytext size="medium-regular">Price: </Bodytext>
-        <Heading size="xtra-xtra-small" stylingclasses="text-primary-600"> 900 DKK</Heading>
-    </div>
-    <div class="flex items-center justify-between w-full">
+        <Heading size="xtra-xtra-small" stylingclasses="text-primary-600">900 DKK</Heading>
+      </div>
+
+      <div class="flex items-center justify-between w-full">
         <Bodytext size="xtra-small-regular">Ticket fee 59 DKK</Bodytext>
-        
-    <div class="flex items-center">
+
+        <div class="flex items-center">
           <button onclick="adjustCount('ticket-3days', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
           <span id="ticket-3days-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
           <button onclick="adjustCount('ticket-3days', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
-    </div>
-</section>
-<!-- 3 Day ticket end -->
+        </div>
+      </div>
+    </section>
+    <!-- 3 Day ticket end -->
 
-<!-- Child ticket start -->
-<section class="mb-20">
-  <div class="pb-5">  
-    <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Child Ticket 3 Year+</Heading>
-    <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">Valid for children aged 3 to 13 when accompanied by an adult. Grants full access to all festival areas, events, and camping.</Bodytext>
+    <!-- Child ticket start -->
+    <section class="mb-20">
+      <div class="pb-5">
+        <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Child Ticket 3 Year+</Heading>
+        <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">
+          Valid for children aged 3 to 13 when accompanied by an adult. Grants full access to all festival areas, events, and camping.
+        </Bodytext>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <Bodytext size="medium-regular">Price: </Bodytext>
+        <Heading size="xtra-xtra-small" stylingclasses="text-primary-600">400 DKK</Heading>
+      </div>
+
+      <div class="flex items-center justify-between w-full">
+        <Bodytext size="xtra-small-regular">Ticket fee 29 DKK</Bodytext>
+
+        <div class="flex items-center">
+          <button onclick="adjustCount('ticket-child', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
+          <span id="ticket-child-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
+          <button onclick="adjustCount('ticket-child', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+        </div>
+      </div>
+    </section>
+    <!-- Child ticket end -->
   </div>
 
-  <div class="flex items-center gap-2">
-      <Bodytext size="medium-regular">Price: </Bodytext>
-      <Heading size="xtra-xtra-small" stylingclasses="text-primary-600"> 400 DKK</Heading>
-  </div>
-  <div class="flex items-center justify-between w-full">
-      <Bodytext size="xtra-small-regular">Ticket fee 29 DKK</Bodytext>
-      
-  <div class="flex items-center">
-        <button onclick="adjustCount('ticket-child', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
-        <span id="ticket-child-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
-        <button onclick="adjustCount('ticket-child', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
-  </div>
-</section>
-<!-- Child ticket end -->
+  <!-- Right side (summary) -->
+  <div class="md:pl-6">
+    <!-- Summary start -->
+    <section class="mb-20">
+      <Heading size="xtra-small" stylingclasses="pb-6">Order Summary</Heading>
 
-<!-- Summary start -->
-<section class="mb-20">
-  <Heading size="xtra-small">Order Summery</Heading>
-  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
-  <div onclick="goToStep(2)">
-      <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+      <div class="text-primary-50 font-lora pb-6">
+        <p id="summary-3days">3 Days Ticket: 0 × 900 DKK</p>
+        <p id="summary-child" class="pb-10">Child Ticket: 0 × 400 DKK</p>
+        <hr class="border-t-1 border-primary-50 pb-2">
+        <p id="summary-total" class="font-bold text-xl font-montserrat text-primary-500">Total: 0 DKK</p>
+      </div>
+
+      <div onclick="goToStep(2)">
+        <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+      </div>
+    </section>
+    <!-- Summary end -->
   </div>
-</section>
-<!-- Summery end -->
+</div>
+
 
 <script>
+  const ticketPrices = {
+    "ticket-3days": 900,
+    "ticket-child": 400
+  };
+
   function adjustCount(id, delta) {
     const el = document.getElementById(`${id}-count`);
     const current = parseInt(el.textContent);
-    el.textContent = Math.max(0, current + delta);
+    const newCount = Math.max(0, current + delta);
+    el.textContent = newCount;
+    updateSummary();
   }
+
+  function updateSummary() {
+  const count3Days = parseInt(document.getElementById("ticket-3days-count").textContent);
+  const countChild = parseInt(document.getElementById("ticket-child-count").textContent);
+
+  const total3Days = count3Days * ticketPrices["ticket-3days"];
+  const totalChild = countChild * ticketPrices["ticket-child"];
+  const total = total3Days + totalChild;
+
+  document.getElementById("summary-3days").textContent = `3 Days Ticket: ${count3Days} × 900 DKK`;
+  document.getElementById("summary-child").textContent = `Child Ticket: ${countChild} × 400 DKK`;
+  document.getElementById("summary-total").textContent = `Total: ${total} DKK`;
+
+  // Gem data i localStorage
+  localStorage.setItem("ticket-3days", count3Days);
+  localStorage.setItem("ticket-child", countChild);
+  localStorage.setItem("ticket-total", total);
+
+  // Log data for debugging
+  console.log("Saved to localStorage:");
+  console.log("ticket-3days:", localStorage.getItem("ticket-3days"));
+  console.log("ticket-child:", localStorage.getItem("ticket-child"));
+  console.log("ticket-total:", localStorage.getItem("ticket-total"));
+}
+
+  function loadSavedCounts() {
+    const saved3 = parseInt(localStorage.getItem("ticket-3days")) || 0;
+    const savedChild = parseInt(localStorage.getItem("ticket-child")) || 0;
+
+    document.getElementById("ticket-3days-count").textContent = saved3;
+    document.getElementById("ticket-child-count").textContent = savedChild;
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    loadSavedCounts();
+    updateSummary();
+  });
+
+  window.updateSummary = updateSummary;
+  window.adjustCount = adjustCount;
 </script>
