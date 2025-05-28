@@ -1,0 +1,43 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Heading from "../components/typography/Heading.astro";
+import Bodytext from "../components/typography/Bodytext.astro";
+import Display from "../components/typography/Display.astro";
+---
+
+<MainLayout title="contact">
+
+<!-- start contact -->
+<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">Contact Information - Lost Farm Crew</Heading>
+<section id="transport" class="flex flex-col md:flex-row gap-8 items-start">
+    <div class="md:w-1/2">
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col items-center mb-10 md:mb-20">
+        <Bodytext size="small-regular" class="md:text-xl lg:text-xl w-full">
+            <ul class="list-disc pl-6 space-y-2 text-primary-50">
+                <li>
+                    <span class="font-semibold">Steen Andersen</span>, Co-founder & Festival Manager – 
+                    <a href="mailto:steen@lostfarm.org" class="text-primary-300 underline hover:text-primary-200">steen@lostfarm.org</a>
+                </li>
+                <li>
+                    <span class="font-semibold">Jude (farmer) Bennett</span>, Co-founder & Program Lead – 
+                    <a href="mailto:jude@lostfarm.org" class="text-primary-300 underline hover:text-primary-200">jude@lostfarm.org</a>
+                </li>
+                <li>
+                    <span class="font-semibold">Pauline Hoch</span>, Press & Partnerships – 
+                    <a href="mailto:pauline@lostfarm.org" class="text-primary-300 underline hover:text-primary-200">pauline@lostfarm.org</a>
+                </li>
+                <li>
+                    <span class="font-semibold">Sophia Rasmussen</span>, Funding
+                </li>
+                <li>
+                    <span class="font-semibold">Petter Brandberg</span>, Build Lead
+                </li>
+            </ul>
+        </Bodytext>
+     
+    </div>
+</section>
+<!-- slut contact -->
+</MainLayout>
