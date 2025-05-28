@@ -3,16 +3,16 @@
 const { href="#", target="_self", variant="tekstlink", 
 size="default" } =Astro.props; 
 
-//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
+//Tailwind classes - der gør sig gældende for alle knapper)
 const linkStyling="underline text-primary-50"; 
 
-//Definer den styling, der gør sig gældende for de forskellige varianter
+//Styling, der gør sig gældende for de forskellige varianter
 const variantClasses= {
     "header":"font-montserrat font-bold",
     "body":"font-lora",
 };
 
-//Definer den styling, der gør sig gældende for de forskelligeog størrelser.
+//Styling, der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses= {
     "large-bold":"text-4xl",
     "medium-bold":"text-3xl",
@@ -27,8 +27,7 @@ const sizeClasses= {
 };
 ---
 
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-
+<!--a tag - der gør det muligt at linke mellem siderne-->
 <a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}>
     <slot/>
 </a>

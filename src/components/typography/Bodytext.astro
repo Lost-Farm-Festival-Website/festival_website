@@ -3,7 +3,7 @@
 const { htmlbodytext="p", size="medium", stylingclasses=""} = Astro.props; 
 const Htmlbodytext = htmlbodytext;
  
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
+//Tailwind classes - der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
 "xtra-large-bold": "text-2xl font-bold",
 "xtra-large-regular": "text-2xl",
@@ -17,4 +17,5 @@ const sizeClasses = {
 "xtra-small-regular": "text-sm",
 };
 ---
-<Htmlbodytext class:list={[sizeClasses[size], "font-lora text-primary-50", stylingclasses]}><slot /></Htmlbodytext>
+<!-- // Importer komponenten, der skal bruges til at vise teksten-->
+ <Htmlbodytext class:list={[sizeClasses[size], "font-lora text-primary-50 leading-relaxed", stylingclasses]}><slot /></Htmlbodytext>

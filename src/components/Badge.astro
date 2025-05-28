@@ -1,23 +1,22 @@
 ---
 // Henter parametrene fra Astro.props
-const { variant = "primary", size = "medium" } = Astro.props;
+const { variant = "primary", size = "responsive-default" } = Astro.props;
 
-//Definer den styling, der gør sig gældende for alle knapper
+//Styling, der gør sig gældende for alle badget
 const badgeStyling = "font-bold font-montserrat px-4 py-3"; 
 
-//Definer den styling, der gør sig gældende for de forskellige varianter 
+//Styling, der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-    "music": "bg-[var(--color-primary-50)] text-[var(--color-primary-900)]",
-    "art":  "bg-[var(--color-primary-200)] text-[var(--color-primary-900)]",
-    "talks":  "bg-[var(--color-primary-600)] text-[var(--color-primary-900)]",
-    "event":  "bg-[var(--color-primary-700)] text-[var(--color-primary-900)]",
+    "music": "bg-primary-50 text-primary-900",
+    "art":  "bg-primary-200 text-primary-900",
+    "talks":  "bg-primary-600 text-primary-900",
+    "event":  "bg-primary-700 text-primary-900",
 };
 
-//Definer den styling, der gør sig gældende for de forskelligeog størrelser.
+//Styling, der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-"desktop-regular": "text-lg w-auto",
-"mobile-small": "text-heading_s w-auto",
+  "responsive-default": "text-s md:text-xl w-auto",
 };
 ---
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<!--Astros class:list sammensætter badgens classes baseret på styling, variant og størrelse -->
 <span class:list={[badgeStyling, variantClasses[variant], sizeClasses[size]]}><slot /></span>
