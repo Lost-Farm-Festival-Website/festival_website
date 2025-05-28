@@ -1,0 +1,74 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Step1 from '../components/billetsteps/step1.astro';
+import Step2 from '../components/billetsteps/step2.astro';
+import Step3 from '../components/billetsteps/step3.astro';
+import Step4 from '../components/billetsteps/step4.astro';
+import Step5 from '../components/billetsteps/step5.astro';
+---
+<MainLayout title="About">
+<div id="ticket-form" class="p-4 max-w-3xl mx-auto">
+  <!-- Progress bar -->
+   
+  <div class="flex justify-between mb-10 text-sm font-bold">
+    <span class="step font-montserrat font-bold text-lg px-4 py-2" data-step="1">1</span>
+    <div class="flex-1 h-0.5 mt-5 bg-gray-300 mx-2"></div>
+    <span class="step font-montserrat font-bold text-lg px-4 py-2" data-step="2">2</span>
+    <div class="flex-1 h-0.5 mt-5 bg-gray-300 mx-2"></div>
+    <span class="step font-montserrat font-bold text-lg px-4 py-2" data-step="3">3</span>
+    <div class="flex-1 h-0.5 mt-5 bg-gray-300 mx-2"></div>
+    <span class="step font-montserrat font-bold text-lg px-4 py-2" data-step="4">4</span>
+    <div class="flex-1 h-0.5 mt-5 bg-gray-300 mx-2"></div>
+    <span class="step font-montserrat font-bold text-lg px-4 py-2" data-step="5">5</span>
+  </div>
+
+  <!-- Step containers -->
+  <div id="step-1" class="step-content">
+    <Step1 />
+  </div>
+  <div id="step-2" class="step-content hidden">
+    <Step2 />
+  </div>
+  <div id="step-3" class="step-content hidden">
+    <Step3 />
+  </div>
+  <div id="step-4" class="step-content hidden">
+    <Step4 />
+  </div>
+  <div id="step-5" class="step-content hidden">
+    <Step5 />
+  </div>
+</div>
+</MainLayout>
+
+<script>
+  let currentStep = 1;
+  const steps = document.querySelectorAll('.step-content');
+  const stepIndicators = document.querySelectorAll('.step');
+
+  function showStep(n) {
+    steps.forEach((el, idx) => {
+      el.classList.toggle('hidden', idx !== n - 1);
+    });
+    stepIndicators.forEach((el, idx) => {
+      el.classList.toggle('bg-primary-600', idx === n - 1);
+      el.classList.toggle('text-primary-50', idx !== n - 1);
+    });
+  }
+
+  window.goToStep = function (n) {
+    currentStep = n;
+    showStep(currentStep);
+  };
+
+  window.adjustCount = function (id, delta) {
+    const el = document.getElementById(`${id}-count`);
+    if (!el) return;
+    const current = parseInt(el.textContent) || 0;
+    const updated = Math.max(0, current + delta);
+    el.textContent = updated;
+  };
+
+  showStep(currentStep);
+</script>
+

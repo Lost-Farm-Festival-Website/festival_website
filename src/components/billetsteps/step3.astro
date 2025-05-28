@@ -1,0 +1,42 @@
+---
+import Heading from "../typography/Heading.astro";
+import Bodytext from "../typography/Bodytext.astro";
+import Button from "../Button.astro"
+---
+<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Contact Information</Heading>
+<!-- Contact information start-->
+<section class="pb-6">
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Full name</Bodytext>
+    <input type="text" placeholder="Lars Larsen" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>  
+  </div>
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">E-mail</Bodytext>
+    <input type="email" placeholder="lars@larsen.com" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
+  </div>
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Phone number</Bodytext>
+    <input type="tel" placeholder="+45 12 34 56 78" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
+  </div>
+  <div class="pb-6">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Country</Bodytext>
+    <input type="text" placeholder="Denmark" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
+  </div>
+</section>
+<!-- Contact information end-->
+
+<!-- Summery start -->
+<section class="mb-20">
+  <Heading size="xtra-small">Order Summery</Heading>
+  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
+  <div class="flex gap-6">
+      <div onclick="goToStep(4)">
+          <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+      </div>
+      <div onclick="goToStep(2)">
+          <p><Button variant="outline-primary" size="mobile-small">Go Back</Button></p>
+      </div>
+  </div>
+</section>
+</div>
+<!-- Summary end -->

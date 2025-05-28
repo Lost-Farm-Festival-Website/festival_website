@@ -4,7 +4,7 @@ const { href="#", target="_self", variant="tekstlink",
 size="default" } =Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const linkStyling="underline"; 
+const linkStyling="underline text-primary-50"; 
 
 //Definer den styling, der gør sig gældende for de forskellige varianter
 const variantClasses= {
@@ -21,6 +21,7 @@ const sizeClasses= {
     "xtra-large-regular":"text-2xl",
     "large-regular":"text-xl",
     "medium-regular":"text-lg",
+    "medium-regular-pink":"text-lg text-primary-600",
     "small-regular":"text-base",
     "xtra-small-regular":"text-sm",
 };
