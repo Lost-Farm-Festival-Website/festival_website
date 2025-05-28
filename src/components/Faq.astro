@@ -13,11 +13,11 @@ const { heading, smallheading, bodytext, } = Astro.props;
   <div class="collapse collapse-arrow">
     <input type="radio" name="faq-accordion" />
 
-     <Heading htmlheading="h3" size="small" stylingclasses="md:text-2xl collapse-title after:text-primary-700"> <!-- after=farven på pilen --> 
+     <Heading size="xtra-small" stylingclasses="md:text-2xl collapse-title after:text-primary-600"> <!-- after=farven på pilen --> 
       {smallheading}
     </Heading>
 
-    <Bodytext htmlBodytext="p" size="small" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]"> <!-- leading-relaxed er linje afstand -->
+    <Bodytext size="small-regular" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]"> <!-- leading-relaxed er linje afstand -->
       {bodytext} 
     </Bodytext>
   </div>
