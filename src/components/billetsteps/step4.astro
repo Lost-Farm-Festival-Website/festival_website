@@ -3,32 +3,91 @@ import Heading from "../typography/Heading.astro";
 import Bodytext from "../typography/Bodytext.astro";
 import Button from "../Button.astro"
 ---
-<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Card information</Heading>
+<div class="grid grid-cols-1 md:grid-cols-2 md:gap-28">
+  <!-- Left side (ticket selection) -->
+  <div>
+<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Card Information</Heading>
+
 <!-- Card info start -->
 <section class="mb-6">
   <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Card number</Bodytext>
-    <input type="text" placeholder="xxxx xxxx xxxx xxxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>  
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Card Number</Bodytext>
+    <input type="text" placeholder="xxxx xxxx xxxx xxxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
+  
   <div class="pb-6">
     <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">CVC</Bodytext>
-    <input type="email" placeholder="xxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
+    <input type="text" placeholder="xxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
 </section>
+<div class="flex gap-2">
+  <input type="checkbox" class="checkbox border-2 border-primary-500 rounded-none bg-transparent checked:bg-primary-500 checked:border-transparent checked:text-white" />
+  <Bodytext size="xtra-small-regular" stylingclasses="text-primary-500 md:text-small lg:text-small">I confirm that I understand and accept the payment for the ticket.</Bodytext>
+</div>
 <!-- Card info end -->
+</div>
 
-<!-- Summery start -->
+<!-- Right side (summary) -->
+<div class="md:pl-6">
+<!-- Order Summary Start -->
 <section class="mb-20">
-  <Heading size="xtra-small">Order Summery</Heading>
-  <Bodytext size="medium-regular" stylingclasses="pb-6">Summery of order</Bodytext>
-  <div class="flex gap-6">
-      <div onclick="goToStep(5)">
-          <p><Button variant="filled-primary" size="mobile-small">Place order</Button></p>
-      </div>
-      <div onclick="goToStep(3)">
-          <p><Button variant="outline-primary" size="mobile-small">Go Back</Button></p>
-      </div>
+  <Heading size="xtra-small" stylingclasses="pb-6">Order Summary</Heading>
+
+  <div class="text-primary-50 font-lora pb-6">
+    <Heading size="xtra-small">Tickets</Heading>
+    <p id="summary-step1-3days">Loading...</p>
+    <p id="summary-step1-child">Loading...</p>
+
+    <Heading size="xtra-small" stylingclasses="pt-4">Add-ons</Heading>
+    <div class="pb-2" id="summary-step2-addons">Loading...</div>
+    <hr class="border-t-1 border-primary-50">
+    <Heading size="xtra-small" stylingclasses="pt-4 text-primary-500">Grand
+    <span id="summary-total-combined">Total: ...</span></Heading>
   </div>
+
+    <div onclick="goToStep(5)">
+      <p><Button variant="filled-primary" size="mobile-small">Place Order</Button></p>
+    </div>
 </section>
 </div>
-<!-- Summary end -->
+</div>
+<!-- Order Summary End -->
+
+<script>
+  // Funktion der henter og opdaterer opsummering for step 4
+  function loadFullSummary() {
+    console.log("🚀 loadFullSummary() kører!");
+
+    const count3Days = parseInt(localStorage.getItem("ticket-3days") ?? "0", 10);
+    const countChild = parseInt(localStorage.getItem("ticket-child") ?? "0", 10);
+    const totalStep1 = localStorage.getItem("ticket-total") ?? "0";
+    const addonsTotal = localStorage.getItem("addons-total") ?? "0";
+    const totalCombined = localStorage.getItem("total-combined") ?? "0";
+
+    document.getElementById("summary-step1-3days").textContent = `3 Days Ticket: ${count3Days} × 900 DKK`;
+    document.getElementById("summary-step1-child").textContent = `Child Ticket: ${countChild} × 400 DKK`;
+    document.getElementById("summary-step1-total").textContent = `Subtotal: ${totalStep1} DKK`;
+
+    const addOns = {
+      "ticket-bus": { label: "Bus Ticket", price: 300 },
+      "ticket-refund": { label: "Refund Option", price: 63 },
+      "ticket-reminder": { label: "Event Reminder", price: 15 },
+      "ticket-sms": { label: "SMS Ticket", price: 10 },
+      "ticket-camping": { label: "Camping", price: 0 },
+    };
+
+    let addOnHTML = "";
+    for (const key in addOns) {
+      const count = parseInt(localStorage.getItem(key) ?? "0", 10);
+      if (count > 0) {
+        addOnHTML += `<p>${addOns[key].label}: ${count} × ${addOns[key].price} DKK</p>`;
+      }
+    }
+
+    document.getElementById("summary-step2-addons").innerHTML = addOnHTML || "<p>No add-ons selected.</p>";
+    document.getElementById("summary-step2-total").textContent = `Add-ons Total: ${addonsTotal} DKK`;
+    document.getElementById("summary-total-combined").textContent = `Total: ${totalCombined} DKK`;
+  }
+
+  window.loadFullSummary = loadFullSummary;
+</script>
