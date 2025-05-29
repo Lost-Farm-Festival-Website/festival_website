@@ -26,8 +26,11 @@ import Link from "../components/typography/Link.astro";
   <!-- Info -->
   <nav class="space-y-2 text-primary-600">
     <Heading size="xtra-small">Info</Heading>
-    <Link href="/practical" variant="body" size="xtra-small-regular">Frequently asked questions</Link>
-    <Link href="/about" variant="body" size="xtra-small-regular">Meet the people behind</Link>
+    <div class="flex flex-col space-y-2">
+      <Link href="/practical" variant="body" size="xtra-small-regular">Frequently asked questions</Link>
+      <Link href="/komponentbibliotek" variant="body" size="xtra-small-regular">Komponentbibliotek</Link>
+      <Link href="/about" variant="body" size="xtra-small-regular">Meet the people behind</Link>
+    </div>
     <Bodytext size="xtra-small-regular">CVR: 44219778</Bodytext>
   </nav>
 </footer>
