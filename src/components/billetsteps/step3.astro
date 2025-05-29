@@ -3,52 +3,51 @@ import Heading from "../typography/Heading.astro";
 import Bodytext from "../typography/Bodytext.astro";
 import Button from "../Button.astro"
 ---
-<div class="grid grid-cols-1 md:grid-cols-2 md:gap-28">
-  <!-- Left side (ticket selection) -->
+<div class="grid grid-cols-1 md:grid-cols-2 mb-10 md:mb-28 gap-10 md:gap-28">
+  <!-- Billetformular -->
   <div>
-<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Contact Information</Heading>
+<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl">Contact Information</Heading>
 <!-- Contact information start-->
-<section class="pb-6">
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Full name</Bodytext>
+<section class="mb-5 md:mb-10">
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">Full name</Bodytext>
     <input type="text" placeholder="Lars Larsen" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>  
   </div>
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">E-mail</Bodytext>
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">E-mail</Bodytext>
     <input type="email" placeholder="lars@larsen.com" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Phone number</Bodytext>
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">Phone number</Bodytext>
     <input type="tel" placeholder="+45 12 34 56 78" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Country</Bodytext>
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">Country</Bodytext>
     <input type="text" placeholder="Denmark" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
 </section>
 <!-- Contact information end-->
 </div>
 
-  <!-- Right side (summary) -->
-  <div class="md:pl-6">
 <!-- Order summary -->
-<section class="mb-20">
-  <Heading size="xtra-small" stylingclasses="pb-6">Order Summary</Heading>
+  <div class="md:pl-6 mb-10 md:mb-28">
+<section class="mb-5 md:mb-10">
+  <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
 
-  <div class="text-primary-50 font-lora pb-6">
+  <div class="text-primary-50 font-lora pb-6 leading-relaxed">
     <Heading size="xtra-small">Tickets</Heading>
     <p id="summary-step1-3days">Loading...</p>
     <p id="summary-step1-child">Loading...</p>
 
-    <Heading size="xtra-small" stylingclasses="pt-4">Add-ons</Heading>
+    <Heading size="xtra-small" stylingclasses="">Add-ons</Heading>
     <div class="pb-2" id="summary-step2-addons">Loading...</div>
     <hr class="border-t-1 border-primary-50">
-    <Heading size="xtra-small" stylingclasses="pt-4 text-primary-500">Grand
-    <span id="summary-total-combined">Total: ...</span></Heading>
+    <Heading size="xtra-small" stylingclasses=" text-primary-500">Total
+    <span id="summary-total-combined">Amount: ...</span></Heading>
   </div>
 
     <div onclick="goToStep(4)">
-      <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
+      <p><Button variant="filled-primary" size="mobile-small">Continue to Payment</Button></p>
     </div>
 
 </section>

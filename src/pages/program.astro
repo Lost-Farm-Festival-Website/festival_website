@@ -4,7 +4,7 @@ import Hero2 from "../components/Hero2.astro"
 import Heading from "../components/typography/Heading.astro"
 import Card_Artist from "../components/Card_artist.astro"
 
-/* Artist array = data source. more flexiable and maintable kode. Makes it possible to implement filter */
+/* Kunstner-array = datakilde. Mere fleksibel og vedligeholdelsesvenlig kode. Gør det muligt at implementere filter */
 const artists = [
   {
     url: "/singlepage",
@@ -128,29 +128,27 @@ const artists = [
   },
 ];
 ---
-
 <MainLayout title="Program">
-<!-- Start Heading -->
+<!-- Start Hero -->
 <Hero2 
-    image="/hero-program.webp"
+    image="/hero_program.webp"
     alt="Festival Program"
     display="Festival Program"
 />
-<!-- Slut Heading -->
-
+<!-- Slut Hero -->
 
 <!--Start Filter function -->
-<section id="filter" class="flex gap-4 mb-5 md:mb-10">
-  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="all"> Full program </button>
-  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="music"> Friday </button>
-  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="event"> Saturday </button>
-  <button type="button" class="text-primary-50 filter-button md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="art"> Sunday </button>
+<section id="filter" class="flex gap-2 md:gap-4 mb-5 md:mb-10">
+  <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="all"> Full program </button>
+  <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="music"> Friday </button>
+  <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="event"> Saturday </button>
+  <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="art"> Sunday </button>
 </section>
 <!-- Slut Filter function -->
 
 
 <!-- card section til mappeing af data til komponent & til filter funktion. Handels the collection of cards -->
-<section id="artist-list" style="display: flex; flex-wrap: wrap; gap: 2rem;" class="artist-grid md:mb-28 mb-10">
+<section id="artist-list" style="display: flex; flex-wrap: wrap;" class="artist-grid mb-10 md:mb-28 flex flex-wrap gap-4 md:gap-8">
         {artists.map(artist => (
             <a href={artist.url} class="artist-card" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
                 <Card_Artist

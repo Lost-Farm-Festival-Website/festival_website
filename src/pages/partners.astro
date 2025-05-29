@@ -3,37 +3,31 @@ import MainLayout from "../layouts/MainLayout.astro"
 import Hero2 from "../components/Hero2.astro"
 import Heading from "../components/typography/Heading.astro"
 ---
-
-<MainLayout>
+<MainLayout title="Partners & fundings">
 <!-- Hero start -->
 <Hero2
   image="../partners-hero.webp"
   alt="Funding & Partners"
   display="Funding & Partners"
-  bodytext={`Lost Farm Festival wouldn’t be possible without the support of our amazing partners and funders. 
-    Their trust, energy, and commitment make it possible for us to dream big and create something truly special.
-    We are deeply grateful — thanks to them, Lost Farm Festival can grow, connect, and inspire.`}
+  bodytext="Lost Farm Festival wouldn't be possible without the support from our amazing partners and funders. Their trust, energy and commitment makes it possible for us to dream big and create something truly special."
+
 />
-<!-- brug af {} fordi den virker kun med dette? -->
  <!-- Hero slut -->
-
-
 <!-- Start Overblik af partners og funding -->
 <section class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-neutral-50/50 py-16 mb-10 md:mb-28">
-    <div class="max-w-7xl mx-auto px-4">
-        <Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl mb-5 md:mb-10">Meet our Partners</Heading> 
-
+    <div class="max-w-7xl mx-auto px-2 md:px-4">
+        <Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">Meet our Partners</Heading> 
         <div class="grid grid-cols-2 md:grid-cols-5 items-center justify-items-center" >
-            <img src="/partner.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner1.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner2.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner3.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner4.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner1.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner2.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner3.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
-            <img src="/partner4.svg" alt="partner lorem" class="max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner1.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner2.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner3.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner4.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner1.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner2.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner3.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
+            <img src="/partner4.svg" alt="lorem ipsum logo" class="max-h-30 md:max-h-40 w-auto hover:cursor-pointer" />
         </div>
     </div>
 </section>

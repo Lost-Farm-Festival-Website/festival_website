@@ -6,51 +6,50 @@ import Bodytext from "../components/typography/Bodytext.astro";
 import Display from "../components/typography/Display.astro";
 ---
 <MainLayout title="Forside">
-
 <!-- Hero start--> 
 <Display size="display-mobile" stylingclasses="md:mb-20 mb-10 md:text-8xl text-primary-500" >Art - Music - Talks & Performances</Display>
-  <div style="display: flex; justify-content: flex-end">
-    <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 mb-4" />
-    <Bodytext size="small-bold">Sjællands Odde Denmark</Bodytext>
+  <div style="display: flex; justify-content: flex-end ">
+    <img src="/sted-icon.svg" alt="sted" class=" w-6 h-6 md:w-6 md:h-6 mr-2" />
+    <Bodytext size="small-bold" stylingclasses="md:text-lg mb-2 md:mb-4" >Sjællands Odde Denmark</Bodytext>
   </div>
 <!-- baggrundsbillede--> 
   <div class="relative w-screen left-1/2 -translate-x-1/2 mb-5 md:mb-10">
-    <img src="/hero-forside.webp" alt="Baggrundsbillede" class="w-full h-[200px] md:h-[240px] object-cover block"
+    <img src="/hero-forside.webp" alt="Billede af blomster med blur overlay" class="w-full h-[200px] md:h-[240px] object-cover block"
     />
     <div class="absolute inset-0 flex items-center justify-center">
+<!-- baggrundsbillede slut--> 
+<!-- Video--> 
       <video
         autoplay muted loop playsinline class="w-[40vw] max-w-[150px] aspect-square shadow-lg sm:w-[30vw] md:w-[25vw] object-cover"
       > <!-- OBS: Boolean attributes - Det er attibutter der ikke behøver en værdi -->
-        <source src="/hero_video.mp4" type="video/mp4" /> Din browser understøtter ikke video.
+        <source src="/hero_video.mp4" type="video/mp4" /> Your browser does not support the video tag.
       </video>
     </div>
   </div>
 <!-- video slut -->
-
   <div class="text-primary-50">
-    <Display size="display-mobile" stylingclasses="text-primary-50 mb-8 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
+    <Display size="display-mobile" stylingclasses="text-primary-50 mb-5 md:mb-10 md:text-8xl flex justify-center" >08.08 - 10.08</Display>
   </div>
   <div class="flex justify-center md:mb-28 mb-10" >
-    <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+    <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
   </div>
 <!-- Hero sult --> 
 
 <!-- start what is Lost Farm Festival -->
-<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">What is Lost Farm Festival</Heading>
-
-<section id="transport" class="flex flex-col md:flex-row gap-8 items-start mb-28">
+<Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">What is Lost Farm Festival</Heading>
+<section class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
   <div class="w-full md:w-1/2">
       <img src="../index_img2.webp" alt="sløret billede af en skov" class="w-full h-auto" />
   </div>
-  <div class="w-full md:w-1/2 flex flex-col items-center mb-10 md:mb-20">
-      <Bodytext size="small-regular" class="md:text-xl lg:text-xl">
+  <div class="w-full md:w-1/2 flex flex-col max-w-[65ch]">
+      <Bodytext size="small-regular" stylingclasses="md:text-lg mb-2 md:mb-4">
         Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
         Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
         This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands odde.
       </Bodytext>
-       <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5">
-          <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button>
-          <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+       <div class="flex flex-col2 md:flex-row gap-4 md:mb-20 mb-10">
+            <a href="/tickets"><Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button></a>
+            <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
       </div>
   </div>
 </section>
