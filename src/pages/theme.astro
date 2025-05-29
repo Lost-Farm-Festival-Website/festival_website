@@ -7,9 +7,8 @@ import Hero2 from "../components/Hero2.astro";
 ---
 
 <MainLayout title="Theme">
-
 <!-- start hero -->
-<div class="mb-10 md:mb-28">
+<div>
     <Hero2 
         image="/hero_theme.webp"
         display="Lost Farm Festival Theme"
@@ -17,31 +16,26 @@ import Hero2 from "../components/Hero2.astro";
         />
 </div>
 <!-- slut hero -->
-
-
 <!-- start section 2--> 
-<Heading size="medium" stylingclasses="md:text-5xl lg:text-5xl text-primary-50 mb-5 md:mb-10">An Adventure Through Art and Sound</Heading>
-    <section id="practical-info" class="flex flex-col md:flex-row gap-16 items-start md:mb-28">
+<Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">An Adventure Through Art and Sound</Heading>
+    <section id="practical-info" class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
         <div class="w-full md:w-1/2">
-            <div class="">
-                <Bodytext size="small-regular" class="md:text-xl lg:text-xl">
+            <div class="flex flex-col max-w-[65ch]">
+                <Bodytext size="small-regular" stylingclasses="md:text-lg mb-2 md:mb-4">
                         From hyper-pop parties that pulse with energy to intimate plant meditations and saunagus, the program offers a flow of unexpected contrasts. Experience everything from outdoor nudejazz and nu-metal to hardcore bass performances that tap into the rhythms of our collective hearts. <br><br>
                         This year, we encourage cultural companions to share stories from the margins, celebrating joy as an act of resistance. As we stumble through traditional lamentations at dawn, we seek to deepen human connection through the power of live art. And of course, we invite you to have a lot of fun along the way!        
                 </Bodytext>
             </div>
-            <div title="2cols-knapper" class="w-full flex flex-col md:flex-row gap-4 md:mt-10 mt-5">
-                <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button>
-                <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button>
+            <div class="flex flex-col2 md:flex-row gap-4 md:mb-20 mb-10">
+                <a href="/tickets"><Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button></a>
+                <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
             </div>
         </div>
-      
-        <div class="w-full md:w-1/2 text-center md:mb-20 mb-10 mt-5 md:mt-20">
-            <Heading size="xtra-small" stylingclasses="text-primary-500 pb-4 ">"I’m drawn to contrasts and how emotions like joy, rage, humor, and sadness coexist. Through Dark Skies  & <br> Brighter Light (...)"</Heading>
-            <Bodytext size="small-regular" stylingclasses="text-primary-500 text-right">Jude Bennett<br>Head of Program</Bodytext>
+            <div class="w-full md:w-1/2 text-center px-5">
+                <Heading size="xtra-small" stylingclasses="md:text-2xl text-primary-500 max-w-[65ch] mb-2 md:mb-4">"I’m drawn to contrasts and how emotions like joy, rage, humor, and sadness coexist. Through Dark Skies & Brighter Light (...)"</Heading>
+                <Bodytext size="small-regular" stylingclasses=" text-primary-500 text-right">Jude Bennett<br>Co-founder, Lost Farm</Bodytext>
+            </div>       
         </div>
     </section>
 <!-- slut section 2--> 
-
-
-
 </MainLayout>
