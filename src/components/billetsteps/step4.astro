@@ -3,50 +3,51 @@ import Heading from "../typography/Heading.astro";
 import Bodytext from "../typography/Bodytext.astro";
 import Button from "../Button.astro"
 ---
-<div class="grid grid-cols-1 md:grid-cols-2 md:gap-28">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-28">
   <!-- Left side (ticket selection) -->
   <div>
-<Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Card Information</Heading>
+<Heading size="medium" stylingclasses="text-primary-500 mb-5 md:mb-10 md:text-3xl">Card Information</Heading>
 
 <!-- Card info start -->
-<section class="mb-6">
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">Card Number</Bodytext>
+<section class="mb-5 md:mb-10">
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">Card Number</Bodytext>
     <input type="text" placeholder="xxxx xxxx xxxx xxxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
-  
-  <div class="pb-6">
-    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg lg:text-lg">CVC</Bodytext>
+  <div class="mb-5 md:mb-10">
+    <Bodytext size="small-regular" stylingclasses="text-primary-500 md:text-lg">CVC</Bodytext>
     <input type="text" placeholder="xxx" class="input input-bordered border-primary-600 bg-transparent rounded-none text-primary-400 placeholder-primary-50 font-lora w-full"/>
   </div>
 </section>
+
+<!-- Check box -->
 <div class="flex gap-2">
-  <input type="checkbox" class="checkbox border-2 border-primary-500 rounded-none bg-transparent checked:bg-primary-500 checked:border-transparent checked:text-white" />
-  <Bodytext size="xtra-small-regular" stylingclasses="text-primary-500 md:text-small lg:text-small">I confirm that I understand and accept the payment for the ticket.</Bodytext>
+  <input type="checkbox" class="checkbox border-2 border-primary-500 rounded-none bg-transparent checked:bg-primary-500 checked:border-transparent checked:text-primary-50" />
+  <Bodytext size="xtra-small-regular" stylingclasses="text-primary-500 md:text-small">I confirm that I understand and accept the payment for the ticket.</Bodytext>
 </div>
-<!-- Card info end -->
 </div>
 
 <!-- Right side (summary) -->
-<div class="md:pl-6">
+<div class="md:pl-6 mb-10 md:mb-28">
 <!-- Order Summary Start -->
-<section class="mb-20">
-  <Heading size="xtra-small" stylingclasses="pb-6">Order Summary</Heading>
+<section class="mb-10 md:mb-28">
+  <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
 
-  <div class="text-primary-50 font-lora pb-6">
+  <div class="text-primary-50 font-lora mb-5 md:mb-10 leading-relaxed">
     <Heading size="xtra-small">Tickets</Heading>
     <p id="summary-step1-3days">Loading...</p>
     <p id="summary-step1-child">Loading...</p>
+    <!-- Brødtext virker ikke, JS vil ikke fange -->
 
-    <Heading size="xtra-small" stylingclasses="pt-4">Add-ons</Heading>
+    <Heading size="xtra-small" stylingclasses="">Add-ons</Heading>
     <div class="pb-2" id="summary-step2-addons">Loading...</div>
     <hr class="border-t-1 border-primary-50">
-    <Heading size="xtra-small" stylingclasses="pt-4 text-primary-500">Grand
-    <span id="summary-total-combined">Total: ...</span></Heading>
+    <Heading size="xtra-small" stylingclasses="text-primary-500">Total
+    <span id="summary-total-combined">Amount: ...</span></Heading>
   </div>
 
     <div onclick="goToStep(5)">
-      <p><Button variant="filled-primary" size="mobile-small">Place Order</Button></p>
+      <p><Button variant="filled-primary" size="mobile-small">Confirm order</Button></p>
     </div>
 </section>
 </div>
