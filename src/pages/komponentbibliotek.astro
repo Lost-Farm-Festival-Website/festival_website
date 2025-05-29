@@ -5,27 +5,32 @@ import Heading from "../components/typography/Heading.astro";
 import Display from "../components/typography/Display.astro";
 import Bodytext from "../components/typography/Bodytext.astro";
 import Link from "../components/typography/Link.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 ---
-<MainLayout title="Komponentbibliotek">
+<MainLayout title="Komponentbibliotek" class="bg-neutral-50">
 
     <!-- start på buttons -->
-    <section class="container mx-auto m-sectiontop px-4">
+    <section class="px-10">
     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Buttons</Heading>
-        <p><Button variant="filled-primary" size="desktop-regular">Variant filled primary desktop</Button></p>
-        <p><Button variant="outline-primary" size="desktop-regular">Variant outline primary desktop </Button></p>
-        <p><Button variant="filled-secondary" size="desktop-regular">Variant filled secondary desktop</Button></p>
-        <p><Button variant="outline-secondary" size="desktop-regular">Variant outline secondary desktop</Button></p>
-
-        <p><Button variant="filled-primary" size="mobile-small">Variant filled primary desktop</Button></p>
-        <p><Button variant="outline-primary" size="mobile-small">Variant outline primary desktop </Button></p>
-        <p><Button variant="filled-secondary" size="mobile-small">Variant filled secondary desktop</Button></p>
-        <p><Button variant="outline-secondary" size="mobile-small">Variant outline secondary desktop</Button></p>
-
-        <p><Button variant="plus" size="desktop-counter">+</Button></p>
-        <p><Button variant="minus" size="desktop-counter">-</Button></p>
-        <hr class="mt-20 border-accent">
+    <div class="flex flex-wrap gap-6 mb-10">
+        <div class="flex flex-col gap-4">
+            <Button variant="filled-primary" size="desktop-regular">Filled primary desktop</Button>
+            <Button variant="outline-primary" size="desktop-regular">Outline primary desktop</Button>
+            <Button variant="filled-secondary" size="desktop-regular">Filled secondary desktop</Button>
+            <Button variant="outline-secondary" size="desktop-regular">Outline secondary desktop</Button>
+        </div>
+        <div class="flex flex-col gap-4">
+            <Button variant="filled-primary" size="mobile-small">Filled primary mobile</Button>
+            <Button variant="outline-primary" size="mobile-small">Outline primary mobile</Button>
+            <Button variant="filled-secondary" size="mobile-small">Filled secondary mobile</Button>
+            <Button variant="outline-secondary" size="mobile-small">Outline secondary mobile</Button>
+        </div>
+        <div class="flex flex-col gap-4 justify-end">
+            <Button variant="plus" size="desktop-counter">+</Button>
+            <Button variant="minus" size="desktop-counter">-</Button>
+        </div>
+    </div>
+    <hr class="mt-20 border-accent">
     </section>
     <!-- slut på buttons -->
 
@@ -89,18 +94,7 @@ import Badge from "../components/Badge.astro";
     <!-- start på card -->
     <section class="container mx-auto m-sectiontop px-4">
     <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Cards</Heading>
-    <div class="grid grid-cols-2 md:grid-gols-3 lg:grid-cols-4 gap-4">
-    <Card
-        url="/singleview"
-        cardimage="rose.jpg"
-        cardtitle="Rosé Chateau"
-        cardtekst="Rosévin som smager af solskin og gode stunder."
-        cardbuttontekst="Køb nu!"
-        badgenyt="true"
-        badgerabat="true"
-        badgefaatilbage="ture"
-    ></Card>
-    </div>
+
     <hr class="mt-20 border-accent">
     </section>
     <!-- slut på card -->
