@@ -4,75 +4,70 @@ import Bodytext from "../typography/Bodytext.astro";
 import Button from "../Button.astro";
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 md:gap-28">
-  <!-- Left side (ticket selection) -->
+  <!-- Billetformular -->
   <div>
-    <Heading size="medium" stylingclasses="text-primary-500 pb-10 md:text-4xl lg:text-4xl">Festival Tickets</Heading>
+    <Heading size="medium" stylingclasses="text-primary-500 mb-5 md:mb-10 md:text-4xl">Festival Tickets</Heading>
     <!-- 3 Day ticket start -->
-    <section class="mb-20">
-      <div class="pb-5">
-        <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">3 Days ticket</Heading>
-        <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">
+    <section class="mb-5 md:mb-10">
+      <div class="mb-5 md:mb-10">
+        <Heading size="small" stylingclasses="mb-2 md:mb-4 md:text-3xl">3 Days ticket</Heading>
+        <Bodytext size="small-regular" stylingclasses="md:text-lg">
           Enjoy three unforgettable days of creativity and culture.
         </Bodytext>
       </div>
-
-      <div class="flex items-center gap-2">
+      <!-- pris -->
+      <div class="flex items-center gap-2 md:gap-4">
         <Bodytext size="medium-regular">Price: </Bodytext>
         <Heading size="xtra-xtra-small" stylingclasses="text-primary-600">900 DKK</Heading>
       </div>
-
+      <!-- ticket fee + ikcon -->
       <div class="flex items-center justify-between w-full">
         <Bodytext size="xtra-small-regular">Ticket fee 59 DKK</Bodytext>
 
         <div class="flex items-center">
-          <button onclick="adjustCount('ticket-3days', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
-          <span id="ticket-3days-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
-          <button onclick="adjustCount('ticket-3days', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+          <button onclick="adjustCount('ticket-3days', -1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-2 py-1 md:px-4 md:py-2">-</button>
+          <span id="ticket-3days-count" class="bg-primary-50 px-3 py-1 md:px-6 md:py-2 font-bold">0</span>
+          <button onclick="adjustCount('ticket-3days', 1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-2 py-1 md:px-4 md:py-2">+</button>
         </div>
       </div>
     </section>
     <!-- 3 Day ticket end -->
 
     <!-- Child ticket start -->
-    <section class="mb-20">
-      <div class="pb-5">
-        <Heading size="small" stylingclasses="pb-2 md:text-3xl lg:text-3xl">Child Ticket 3 Year+</Heading>
-        <Bodytext size="small-regular" stylingclasses="md:text-lg lg:text-lg">
+    <section class="mb-5 md:mb-10">
+      <div class="mb-5 md:mb-10">
+        <Heading size="small" stylingclasses="pb-2 md:text-3xl">Child Ticket 3 Year+</Heading>
+        <Bodytext size="small-regular" stylingclasses="md:text-lg">
           Valid for children aged 3 to 13 when accompanied by an adult. Grants full access to all festival areas, events, and camping.
         </Bodytext>
       </div>
-
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 md:gap-4">
         <Bodytext size="medium-regular">Price: </Bodytext>
         <Heading size="xtra-xtra-small" stylingclasses="text-primary-600">400 DKK</Heading>
       </div>
-
       <div class="flex items-center justify-between w-full">
         <Bodytext size="xtra-small-regular">Ticket fee 29 DKK</Bodytext>
-
         <div class="flex items-center">
-          <button onclick="adjustCount('ticket-child', -1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-4 py-2">-</button>
-          <span id="ticket-child-count" class="bg-primary-50 px-6 py-2 font-bold">0</span>
-          <button onclick="adjustCount('ticket-child', 1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-4 py-2">+</button>
+          <button onclick="adjustCount('ticket-child', -1)" class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-2 py-1 md:px-4 md:py-2">-</button>
+          <span id="ticket-child-count" class="bg-primary-50 px-3 py-1 md:px-6 md:py-2 font-bold">0</span>
+          <button onclick="adjustCount('ticket-child', 1)" class="bg-primary-600 text-primary-50 hover:bg-primary-700 px-2 py-1 md:px-4 md:py-2">+</button>
         </div>
       </div>
     </section>
-    <!-- Child ticket end -->
+    <!-- Child ticket slut -->
   </div>
 
-  <!-- Right side (summary) -->
-  <div class="md:pl-6">
-    <!-- Summary start -->
-    <section class="mb-20">
-      <Heading size="xtra-small" stylingclasses="pb-6">Order Summary</Heading>
+ <!-- Summary start -->
+  <div class="md:pl-6 mb-10 md:mb-28">
+    <section class="mb-5 md:mb-10">
+      <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
 
       <div class="text-primary-50 font-lora pb-6">
         <p id="summary-3days">3 Days Ticket: 0 × 900 DKK</p>
-        <p id="summary-child" class="pb-10">Child Ticket: 0 × 400 DKK</p>
+        <p id="summary-child" class="mb-5 md:mb-10">Child Ticket: 0 × 400 DKK</p>
         <hr class="border-t-1 border-primary-50 pb-2">
         <p id="summary-total" class="font-bold text-xl font-montserrat text-primary-500">Total: 0 DKK</p>
       </div>
-
       <div onclick="goToStep(2)">
         <p><Button variant="filled-primary" size="mobile-small">Next</Button></p>
       </div>
