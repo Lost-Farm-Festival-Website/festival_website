@@ -148,9 +148,9 @@ const artists = [
 
 
 <!-- card section til mappeing af data til komponent & til filter funktion. Handels the collection of cards -->
-<section id="artist-list" style="display: flex; flex-wrap: wrap;" class="artist-grid mb-10 md:mb-28 flex flex-wrap gap-4 md:gap-8">
+<section id="artist-list" style="display: flex; flex-wrap: wrap;" class="artist-grid mb-10 md:mb-28 flex flex-wrap gap-4">
         {artists.map(artist => (
-            <a href={artist.url} class="artist-card" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
+            <a href={artist.url} class="artist-card staggeranimation" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
                 <Card_Artist
                     url={artist.url}
                     image={artist.image}
@@ -190,3 +190,4 @@ const artists = [
 <!-- slut Script til at filter i badges -->
 
 </MainLayout>
+

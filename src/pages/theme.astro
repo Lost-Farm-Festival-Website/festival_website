@@ -17,6 +17,7 @@ import Hero2 from "../components/Hero2.astro";
 </div>
 <!-- slut hero -->
 <!-- start section 2--> 
+<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-neutral-50/50 p-16 mb-10 md:mb-28">
 <Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">An Adventure Through Art and Sound</Heading>
     <section id="practical-info" class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
         <div class="w-full md:w-1/2">
@@ -31,11 +32,22 @@ import Hero2 from "../components/Hero2.astro";
                 <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
             </div>
         </div>
-            <div class="w-full md:w-1/2 text-center px-5">
-                <Heading size="xtra-small" stylingclasses="md:text-2xl text-primary-500 max-w-[65ch] mb-2 md:mb-4">"I’m drawn to contrasts and how emotions like joy, rage, humor, and sadness coexist. Through Dark Skies & Brighter Light (...)"</Heading>
-                <Bodytext size="small-regular" stylingclasses=" text-primary-500 text-right">Jude Bennett<br>Co-founder, Lost Farm</Bodytext>
+            <div class="w-full md:w-1/2 text-center px-5 fadein">
+                <Heading size="xtra-small" stylingclasses="md:text-2xl text-primary-900 max-w-[65ch] mb-2 md:mb-4">"I’m drawn to contrasts and how emotions like joy, rage, humor, and sadness coexist. Through Dark Skies & Brighter Light (...)"</Heading>
+                <Bodytext size="small-regular" stylingclasses=" text-primary-900 text-right">Jude Bennett<br>Co-founder, Lost Farm</Bodytext>
             </div>       
         </div>
     </section>
+</div>
 <!-- slut section 2--> 
 </MainLayout>
+
+<script>
+    import { inView } from "motion";
+
+const FadeIn = document.querySelector(".fadein");
+
+inView(FadeIn, () => {
+FadeIn.classList.add("animate__animated", "animate__zoomIn");
+});
+</script>
