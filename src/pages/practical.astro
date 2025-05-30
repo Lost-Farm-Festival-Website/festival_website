@@ -46,7 +46,7 @@ const faqs = [
     <div class="w-full md:w-1/2">
         <img src="../overview.webp" alt="Kort over Lost farm festival" class="w-full h-auto" />
     </div>
-    <div class="w-full md:w-1/2 flex items-center md:mb-10 mb-5">
+    <div class="w-full md:w-1/2 flex items-center md:mb-10 mb-5 fadein">
         <Bodytext size="small-regular" stylingclasses="md:text-lg flex flex-col max-w-[65ch]">
             Lost Farm Festival takes place from August 8-10, 2025, at Lost Farm HQ in Yderby, 
             a small hamlet surrounded by beautiful fields and the sea. The festival site opens on Friday, August 8th at 12:00 noon, with the program starting shortly after. 
@@ -59,11 +59,12 @@ const faqs = [
 <!-- slut Practical information -->
 
 <!-- start Tickets and transport -->
+<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-neutral-50/50 p-16 mb-10 md:mb-28">
 <Heading size="medium" stylingclasses="md:text-5xl gap-4 md:gap-8 items-start mb-5 md:mb-10">Tickets & Transports</Heading>
 <section class="flex flex-col md:flex-row gap-16 items-start mb-5 md:mb-10">
     <div class="md:w-1/2"> <!-- tom div for højer stilling -->
     </div>
-    <div class="w-full md:w-1/2 flex flex-col">
+    <div class="w-full md:w-1/2 flex flex-col fadein1">
         <Bodytext size="small-regular" stylingclasses="md:text-lg flex flex-col max-w-[65ch] mb-4 md:mb-8">
             Here the berries are extra sweet and the apple's freshness makes you weep, the animals are friendly as long you are friendly to them and the grass is just a little greener.
             Once you’ve have been here, you’ll know why!<br><br> To join the three-day adventure, buy your ticket for 950 DKK. For those traveling from Copenhagen, you can take THE LOST 
@@ -77,12 +78,13 @@ const faqs = [
     </div>
     </div>
 </section>
+</div>
 <!-- slut Tickets and transport -->
 
 <!-- start Camping & Accommodation --> 
 <Heading size="medium" stylingclasses="md:text-5xl gap-4 md:gap-8 items-start mb-5 md:mb-10">Camping & Accommodation</Heading>
 <section class="flex flex-col md:flex-row gap-16 items-start mb-5 md:mb-10">
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 fadein2">
       <Bodytext size="small-regular" stylingclasses="md:text-lg flex flex-col max-w-[65ch] mb-4 md:mb-8">
             We want you to enjoy all three days of the festival with us. Free tent camping is available at The Field, just next to Lost Farm HQ. We ask that you leave large party 
             tents and loud sound systems at home and opt for a modest-sized tent to share with the birds and nature. <br><br> While we encourage Lostfarmers to enjoy themselves, 
@@ -98,7 +100,7 @@ const faqs = [
 <!-- slut Camping & Accommodation --> 
 
 <!-- start FAQ -->
-<section id="Faq" class="mb-10 md:mb-28">
+<section id="Faq" class="mb-10 md:mb-28 scroll-mt-24">
 {faqs.map((faq, i) => (
   <Faq 
     heading={i === 0 ? faq.heading : undefined}
@@ -109,3 +111,25 @@ const faqs = [
 </section>
 <!-- slut FAQ -->
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+const FadeIn = document.querySelector(".fadein");
+
+inView(FadeIn, () => {
+FadeIn.classList.add("animate__animated", "animate__zoomIn");
+});
+
+const FadeIn1 = document.querySelector(".fadein1");
+
+inView(FadeIn1, () => {
+FadeIn1.classList.add("animate__animated", "animate__zoomIn");
+});
+
+const FadeIn2 = document.querySelector(".fadein2");
+
+inView(FadeIn2, () => {
+FadeIn2.classList.add("animate__animated", "animate__zoomIn");
+});
+</script>

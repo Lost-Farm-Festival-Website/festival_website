@@ -24,9 +24,11 @@ const { title } = Astro.props;
 			<Header></Header>
 		</header>
 		
-		<main class="mx-6 md:mx-12 bg-no-repeat bg-cover" style="background-image: url('/baggrund.svg');">
-			<slot/>
-		</main>
+		<div class="overflow-hidden">
+			<main class="mx-6 md:mx-12 bg-no-repeat bg-cover" style="background-image: url('/baggrund.svg');">
+				<slot/>
+			</main>
+		</div>
 
 		<footer>
 			<Footer></Footer>
@@ -34,3 +36,34 @@ const { title } = Astro.props;
 			
 	</body>
 </html>
+
+
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
+	animate( "body", { opacity: [ 0, 1] }, { duration: 1 })
+
+
+	/* Stagger animation */
+	inView( "#artist-list" , () =>{
+		animate(
+		".staggeranimation",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(0.5, { startDelay: 0.5 })
+		}
+		)
+	})
+
+	/* Stagger animation */
+	inView( "#stagger" , () =>{
+		animate(
+		".staggeranimation li",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(0.5, { startDelay: 0.5 })
+		}
+		)
+	})
+</script>
+	

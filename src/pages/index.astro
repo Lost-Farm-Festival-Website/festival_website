@@ -42,7 +42,7 @@ import 'animate.css';
   <div class="w-full md:w-1/2">
       <img src="../index_img2.webp" alt="sløret billede af en skov" class="w-full h-auto" />
   </div>
-  <div class="w-full md:w-1/2 flex flex-col max-w-[65ch]">
+  <div class="w-full md:w-1/2 flex flex-col max-w-[65ch] fadein">
       <Bodytext size="small-regular" stylingclasses="md:text-lg mb-2 md:mb-4">
         Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
         Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
@@ -56,3 +56,13 @@ import 'animate.css';
 </section>
 <!-- slut what is Lost Farm Festival -->
 </MainLayout>
+
+<script>
+  	import { inView } from "motion";
+ 
+ const FadeIn = document.querySelector(".fadein");
+
+ inView(FadeIn, () => {
+ FadeIn.classList.add("animate__animated", "animate__zoomIn");
+});
+</script>
