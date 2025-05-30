@@ -18,11 +18,11 @@ const {title, description, price, buttonText,} = Astro.props;
     {price}
   </Bodytext>  
 
-  <div>
+  <a href="/billetformular">
     <Button variant="filled-primary" size="mobile-regular md:desktop-regular">
       {buttonText}
     </Button>
-  </div>
+  </a>
 
   <slot />
 </div> 
