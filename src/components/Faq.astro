@@ -5,7 +5,7 @@ import Bodytext from "./Bodytext.astro"
 const { heading, smallheading, bodytext, } = Astro.props;
 ---
 <section aria-label="FAQ" class="">
-    <Heading size="medium" stylingclasses="md:text-5xl md:mb-10 mb-5">{heading}</Heading>
+    <Heading size="medium" stylingclasses="md:text-5xl md:mb-btm-desk mb-btm-mobi">{heading}</Heading>
 </section>
 
 <section class="border-b border-primary-50">
@@ -17,7 +17,7 @@ const { heading, smallheading, bodytext, } = Astro.props;
       {smallheading}
     </Heading>
 
-    <Bodytext size="small-regular" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-[686px]"> <!-- leading-relaxed er linje afstand -->
+    <Bodytext size="small-regular" stylingclasses="collapse-content md:text-lg leading-relaxed md:w-4xl"> <!-- leading-relaxed er linje afstand -->
       {bodytext} 
     </Bodytext>
   </div>
