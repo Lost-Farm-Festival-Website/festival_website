@@ -7,64 +7,91 @@ import Display from "../components/Display.astro";
 import 'animate.css';
 ---
 <MainLayout title="Forside">
-<!-- Hero start--> 
-<Display size="display-mobile" stylingclasses="md:mb-20 mb-10 md:text-8xl text-primary-500" >Art - Music - Talks & Performances</Display>
+
+  <!-- Hero start--> 
+  <Display size="display-mobile" stylingclasses="md:mb-20 mb-10 md:text-8xl text-primary-500">
+    Art - Music - Talks & Performances
+  </Display>
+
   <div style="display: flex; justify-content: flex-end ">
-    <img src="/sted-icon.svg" alt="sted" class=" w-6 h-6 md:w-6 md:h-6 mr-2 bounce-top" />
-    <Bodytext size="small-bold" stylingclasses="md:text-lg mb-2 md:mb-4" >Sjællands Odde Denmark</Bodytext>
+    <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 md:w-6 md:h-6 mr-2 bounce-top" />
+    <Bodytext size="small-bold" stylingclasses="md:text-lg mb-2 md:mb-4">
+      Sjællands Odde Denmark
+    </Bodytext>
   </div>
-<!-- baggrundsbillede--> 
+
+  <!-- baggrundsbillede--> 
   <div class="relative w-screen left-1/2 -translate-x-1/2 mb-5 md:mb-10">
-    <img src="/hero-forside.webp" alt="Billede af blomster med blur overlay" class="w-full h-[200px] md:h-[240px] object-cover block"
-    />
+    <img src="/hero-forside.webp" alt="Billede af blomster med blur overlay" class="w-full h-[200px] md:h-[240px] object-cover block" />
     <div class="absolute inset-0 flex items-center justify-center">
-<!-- baggrundsbillede slut--> 
-<!-- Video--> 
-      <video
-        autoplay muted loop playsinline class="w-[40vw] max-w-[150px] aspect-square shadow-lg sm:w-[30vw] md:w-[25vw] object-cover"
-      > <!-- OBS: Boolean attributes - Det er attibutter der ikke behøver en værdi -->
-        <source src="/hero_video.mp4" type="video/mp4" /> Your browser does not support the video tag.
+      <!-- Video--> 
+      <video autoplay muted loop playsinline class="w-[40vw] max-w-[150px] aspect-square shadow-lg sm:w-[30vw] md:w-[25vw] object-cover">
+        <source src="/hero_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
     </div>
   </div>
-<!-- video slut -->
-  <div class="text-primary-50">
-    <Display size="display-mobile" stylingclasses="text-primary-50 mb-5 md:mb-10 md:text-8xl flex justify-center items-center text-center" >08.08 - 10.08</Display>
-  </div>
-  <div class="flex justify-center md:mb-28 mb-10" >
-    <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
-  </div>
-<!-- Hero sult --> 
+  <!-- video slut -->
 
-<!-- start what is Lost Farm Festival -->
-<Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">What is Lost Farm Festival</Heading>
-<section class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
-  <div class="w-full md:w-1/2">
-      <img src="../index_img2.webp" alt="sløret billede af en skov" class="w-full h-auto" />
+  <div class="text-primary-50">
+    <Display size="display-mobile" stylingclasses="text-primary-50 mb-5 md:mb-10 md:text-8xl flex justify-center items-center text-center">
+      08.08 - 10.08
+    </Display>
   </div>
-  <div class="w-full md:w-1/2 flex flex-col max-w-[65ch] fadein">
+
+  <div class="flex justify-center md:mb-28 mb-10">
+    <a href="/program">
+      <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">
+        Explore Program
+      </Button>
+    </a>
+  </div>
+  <!-- Hero slut --> 
+
+  <!-- What is Lost Farm Festival -->
+  <Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">
+    What is Lost Farm Festival
+  </Heading>
+
+  <section class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
+    <div class="w-full md:w-1/2">
+      <img src="../index_img2.webp" alt="sløret billede af en skov" class="w-full h-auto" />
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col max-w-[65ch] fadein">
       <Bodytext size="small-regular" stylingclasses="md:text-lg mb-2 md:mb-4">
         Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
         Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
-        This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands odde.
+        This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands Odde.
       </Bodytext>
-       <div class="flex flex-col2 md:flex-row gap-4 md:mb-20 mb-10">
-            <a href="/tickets"><Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Buy Ticket</Button></a>
-            <a href="/program"><Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">Explore Program</Button></a>
+
+      <div class="flex flex-col2 md:flex-row gap-4 md:mb-20 mb-10">
+        <a href="/tickets">
+          <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">
+            Buy Ticket
+          </Button>
+        </a>
+        <a href="/program">
+          <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">
+            Explore Program
+          </Button>
+        </a>
       </div>
-  </div>
-</section>
-<!-- slut what is Lost Farm Festival -->
+    </div>
+  </section>
+  <!-- Slut what is Lost Farm Festival -->
+
 </MainLayout>
 
-<!-- Ui lir -->
-<script>
-  	import { inView } from "motion";
- 
- const FadeIn = document.querySelector(".fadein");
+<!-- UI lir: Scroll-animation med Motion One -->
+<script type="module" client:load>
+  import { inView } from "@motionone/dom";
 
- inView(FadeIn, () => {
- FadeIn.classList.add("animate__animated", "animate__zoomIn");
-});
+  const fadeEls = document.querySelectorAll(".fadein");
+
+  fadeEls.forEach((el) => {
+    inView(el, () => {
+      el.classList.add("animate__animated", "animate__zoomIn");
+    });
+  });
 </script>
-<!-- SLut Ui lir -->
+<!-- Slut UI lir -->

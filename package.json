@@ -10,10 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.8",
+    "@motionone/dom": "^10.18.0",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.8",
     "animate.css": "^4.1.1",
-    "astro": "^5.1.10"
+    "astro": "^5.1.10",
+    "daisyui": "^5.0.43"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
