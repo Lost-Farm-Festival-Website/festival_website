@@ -61,6 +61,8 @@
   --margin-m: 24px;
   --margin-l: 32px;
   --margin-xl: 48px;
+  --margin-2xl: 64px;
+  --margin-3xl: 80px;
 
   /* padding */
   --padding-px: 1px;
@@ -112,7 +114,7 @@
   --width-4xl: 660px;
 
   /* height */
-  --height-6xl: 40px;
+  --height-6xs: 40px;
   --height-5xs: 60px;
   --height-4xs: 100px;
   --height-3xs: 120px;
