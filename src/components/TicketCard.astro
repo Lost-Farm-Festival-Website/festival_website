@@ -5,16 +5,16 @@ import Heading from "./Heading.astro";
 const { title, description, price, buttonText } = Astro.props;
 ---
 
-<div class="p-10 h-70 md:h-90 bg-neutral-50/50 overflow-hidden">
-  <Heading size="small" stylingclasses="md:text-3xl md:mb-4 mb-2 text-primary-900">
+<div class="p-10 h-xl md:h-5xl bg-neutral-50/50 overflow-hidden">
+  <Heading size="small" stylingclasses="md:text-3xl md:mb-s mb-xs text-primary-900">
     {title}
   </Heading>
 
-  <Bodytext size="small" stylingclasses="md:text-lg md:mb-4 mb-2 text-primary-900 max-w-[50ch]">
+  <Bodytext size="small" stylingclasses="md:text-lg md:mb-s mb-xs text-primary-900 max-w-[50ch]">
     {description}
   </Bodytext>  
 
-  <Bodytext size="small" stylingclasses="md:text-lg md:mb-4 mb-2 text-primary-900 font-bold">
+  <Bodytext size="small" stylingclasses="md:text-lg md:mb-s mb-xs text-primary-900 font-bold">
     {price}
   </Bodytext>  
 

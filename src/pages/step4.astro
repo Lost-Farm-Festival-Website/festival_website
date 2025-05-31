@@ -10,12 +10,10 @@ import Processbar from '../components/Processbar.astro';
 
 <MainLayout>
 <Processbar />
- 
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-28 mb-10 md:mb-28 min-h-screen">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-28 mb-btm-mobi md:mb-btm-desk min-h-screen">
     <!-- Kortoplysninger -->
     <div>
-      <Heading size="medium" stylingclasses="text-primary-500 mb-5 md:mb-10 md:text-3xl">
+      <Heading size="medium" stylingclasses="text-primary-500 mb-m md:mb-xl md:text-3xl">
         Card Information
       </Heading>
 
@@ -52,9 +50,9 @@ import Processbar from '../components/Processbar.astro';
     <!-- Opsummering -->
     <div class="md:pl-6">
       <section>
-        <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
+        <Heading size="xtra-small" stylingclasses="mb-m md:mb-xl">Order Summary</Heading>
 
-        <div class="text-primary-50 font-lora leading-relaxed mb-10">
+        <div class="text-primary-50 font-lora leading-relaxed mb-xl">
           <Heading size="xtra-small">Tickets</Heading>
           <p id="summary-step1-3days">Loading...</p>
           <p id="summary-step1-child">Loading...</p>

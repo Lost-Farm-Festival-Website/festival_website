@@ -136,7 +136,7 @@ const artists = [
 <!-- Slut Hero -->
 
 <!--Start Filter function -->
-<section id="filter" class="flex gap-2 md:gap-4 mb-5 md:mb-10">
+<section id="filter" class="flex gap-2 md:gap-4 mb-m md:mb-xl">
   <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="all"> Full program </button>
   <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="music"> Friday </button>
   <button type="button" class="text-primary-50 filter-button text-xl md:text-2xl font-bold tracking-wide hover:underline hover:cursor-pointer" data-filter="event"> Saturday </button>
@@ -146,7 +146,7 @@ const artists = [
 
 
 <!-- card section til mappeing af data til komponent & til filter funktion. Handels the collection of cards -->
-<section id="artist-list" style="display: flex; flex-wrap: wrap;" class="artist-grid mb-10 md:mb-28 flex flex-wrap gap-4">
+<section id="artist-list" style="display: flex; flex-wrap: wrap;" class="artist-grid mb-btm-mobi md:mb-btm-desk flex flex-wrap gap-4">
         {artists.map(artist => (
             <a href={artist.url} class="artist-card staggeranimation" data-badge={artist.badgeVariant} style="text-decoration: none; color: inherit;">
                 <Artistcard

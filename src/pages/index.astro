@@ -9,20 +9,20 @@ import 'animate.css';
 <MainLayout title="Forside">
 
   <!-- Hero start--> 
-  <Display size="display-mobile" stylingclasses="mb-btm md:text-8xl text-primary-500">
+  <Display size="display-mobile" stylingclasses="mb-btm-mobi md:mb-btm-desk md:text-8xl text-primary-500">
     Art - Music - Talks & Performances
   </Display>
 
   <div style="display: flex; justify-content: flex-end ">
     <img src="/sted-icon.svg" alt="sted" class="w-6 h-6 md:w-6 md:h-6 mr-2 bounce-top" />
-    <Bodytext size="small-bold" stylingclasses="md:text-lg mb-2 md:mb-4">
+    <Bodytext size="small-bold" stylingclasses="md:text-lg mb-xs md:mb-s">
       Sjællands Odde Denmark
     </Bodytext>
   </div>
 
   <!-- baggrundsbillede--> 
-  <div class="relative w-screen left-1/2 -translate-x-1/2 mb-5 md:mb-10">
-    <img src="/hero-forside.webp" alt="Billede af blomster med blur overlay" class="w-full h-[200px] md:h-[240px] object-cover block" />
+  <div class="relative w-screen left-1/2 -translate-x-1/2 mb-m md:mb-xl">
+    <img src="/hero-forside.webp" alt="Billede af blomster med blur overlay" class="w-full h-s md:h-lg object-cover block" />
     <div class="absolute inset-0 flex items-center justify-center">
       <!-- Video--> 
       <video autoplay muted loop playsinline class="w-[40vw] max-w-[150px] aspect-square shadow-lg sm:w-[30vw] md:w-[25vw] object-cover">
@@ -31,15 +31,15 @@ import 'animate.css';
       </video>
     </div>
   </div>
-  <!-- video slut -->
+  <!-- baggrundsbillede og video slut -->
 
   <div class="text-primary-50">
-    <Display size="display-mobile" stylingclasses="text-primary-50 mb-5 md:mb-10 md:text-8xl flex justify-center items-center text-center">
+    <Display size="display-mobile" stylingclasses="text-primary-50 mb-m md:mb-xl md:text-8xl flex justify-center items-center text-center">
       08.08 - 10.08
     </Display>
   </div>
 
-  <div class="flex justify-center md:mb-28 mb-10">
+  <div class="flex justify-center md:mb-btm-desk mb-btm-mobi">
     <a href="/program">
       <Button variant="outline-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">
         Explore Program
@@ -49,22 +49,22 @@ import 'animate.css';
   <!-- Hero slut --> 
 
   <!-- What is Lost Farm Festival -->
-  <Heading size="medium" stylingclasses="md:text-5xl mb-5 md:mb-10">
+  <Heading size="medium" stylingclasses="md:text-5xl mb-m md:mb-xl">
     What is Lost Farm Festival
   </Heading>
 
-  <section class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-10 md:mb-28">
+  <section class="flex flex-col md:flex-row gap-4 md:gap-8 items-start mb-btm-mobi md:mb-btm-desk">
     <div class="w-full md:w-1/2">
       <img src="../index_img2.webp" alt="sløret billede af en skov" class="w-full h-auto" />
     </div>
-    <div class="w-full md:w-1/2 flex flex-col max-w-[65ch] fadein">
-      <Bodytext size="small-regular" stylingclasses="md:text-lg mb-2 md:mb-4">
+    <div class="w-full md:w-1/2 flex flex-col max-w-xl fadein">
+      <Bodytext size="small-regular" stylingclasses="md:text-lg mb-xs md:mb-s">
         Lost Farm Festival is a three-day journey through art, music, and performance on the wild edge of Sjællands Odde.<br><br>
         Artists are invited to experiment and create moments that can’t happen anywhere else. With the landscape, community, and artistic risk at the forefront.<br><br>
         This is not Copenhagen or Aarhus—this is the cultural edge, Sjællands Odde.
       </Bodytext>
 
-      <div class="flex flex-col2 md:flex-row gap-4 md:mb-20 mb-10">
+      <div class="flex flex-col2 md:flex-row gap-4 md:mb-3xl mb-xl">
         <a href="/tickets">
           <Button variant="filled-primary" size="mobile-regular md:desktop-regular" class="w-full md:w-1/2">
             Buy Ticket

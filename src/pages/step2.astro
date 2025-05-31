@@ -43,12 +43,12 @@ const addOns = [
   <div class="grid grid-cols-1 md:grid-cols-2 md:gap-28 min-h-screen">
     <!-- Add-ons Form -->
     <div>
-      <Heading size="medium" stylingclasses="text-primary-500 mb-5 md:mb-10 md:text-4xl">Additional Purchase</Heading>
+      <Heading size="medium" stylingclasses="text-primary-500 mb-m md:mb-xl md:text-4xl">Additional Purchase</Heading>
 
       {addOns.map(({ id, title, description, price }) => (
-        <section class="mb-5 md:mb-10">
-          <div class="mb-5 md:mb-10">
-            <Heading size="small" stylingclasses="mb-2 md:mb-4 md:text-3xl">{title}</Heading>
+        <section class="mb-m md:mb-xl">
+          <div class="mb-m md:mb-xl">
+            <Heading size="small" stylingclasses="mb-xs md:mb-s md:text-3xl">{title}</Heading>
             {description && (
               <Bodytext size="small-regular" stylingclasses="md:text-lg">{description}</Bodytext>
             )}
@@ -59,7 +59,7 @@ const addOns = [
             <Heading size="xtra-xtra-small" stylingclasses="text-primary-600">{price} DKK</Heading>
           </div>
 
-          <div class="flex items-center justify-between w-full mt-2">
+          <div class="flex items-center justify-between w-full mt-xs">
             <Bodytext size="xtra-small-regular">Add quantity</Bodytext>
             <div class="flex items-center">
               <button onclick={`adjustCount('${id}', -1)`} class="bg-primary-300 text-primary-50 hover:bg-primary-400 px-2 py-1 md:px-4 md:py-2">-</button>
@@ -72,16 +72,16 @@ const addOns = [
     </div>
 
     <!-- order Summary -->
-    <div class="md:pl-6 mb-10 md:mb-28">
+    <div class="md:pl-6 mb-btm-mobi md:mb-btm-desk">
       <section class="mb-5 md:mb-10">
-        <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
+        <Heading size="xtra-small" stylingclasses="mb-m md:mb-xl">Order Summary</Heading>
 
         <div class="text-primary-50 font-lora pb-6 leading-relaxed">
           <p id="summary-step1-3days">Loading...</p>
           <p id="summary-step1-child">Loading...</p>
           <p id="summary-step1-total">Subtotal: 0 DKK</p>
 
-          <hr class="border-t border-primary-50 my-4" />
+          <hr class="border-t border-primary-50 my-s" />
           <p class="pb-2 font-montserrat text-lg">Add-ons: <span id="addons-total-display" class="font-bold">0 DKK</span></p>
           <p class="font-montserrat text-xl font-bold text-primary-500">Total: <span id="combined-total-display">0 DKK</span></p>
         </div>

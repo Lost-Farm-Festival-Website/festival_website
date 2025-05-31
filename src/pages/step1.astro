@@ -13,12 +13,12 @@ import Processbar from '../components/Processbar.astro';
 <div class="grid grid-cols-1 md:grid-cols-2 md:gap-28 min-h-screen">
   <!-- Billetformular -->
   <div>
-    <Heading size="medium" stylingclasses="text-primary-500 mb-5 md:mb-10 md:text-4xl">Festival Tickets</Heading>
+    <Heading size="medium" stylingclasses="text-primary-500 mb-m md:mb-xl md:text-4xl">Festival Tickets</Heading>
 
     <!-- 3 Day Ticket -->
-    <section class="mb-5 md:mb-10">
-      <div class="mb-5 md:mb-10">
-        <Heading size="small" stylingclasses="mb-2 md:mb-4 md:text-3xl">3 Days ticket</Heading>
+    <section class="mb-m md:mb-xl">
+      <div class="mb-m md:mb-xl">
+        <Heading size="small" stylingclasses="mb-xs md:mb-s md:text-3xl">3 Days ticket</Heading>
         <Bodytext size="small-regular" stylingclasses="md:text-lg">
           Enjoy three unforgettable days of creativity and culture.
         </Bodytext>
@@ -41,8 +41,8 @@ import Processbar from '../components/Processbar.astro';
     </section>
 
     <!-- Child Ticket -->
-    <section class="mb-5 md:mb-10">
-      <div class="mb-5 md:mb-10">
+    <section class="mb-m md:mb-xl">
+      <div class="mb-m md:mb-xl">
         <Heading size="small" stylingclasses="pb-2 md:text-3xl">Child Ticket 3 Year+</Heading>
         <Bodytext size="small-regular" stylingclasses="md:text-lg">
           Valid for children aged 3 to 13 when accompanied by an adult. Grants full access to all festival areas, events, and camping.
@@ -66,13 +66,13 @@ import Processbar from '../components/Processbar.astro';
   </div>
 
   <!-- Summary -->
-  <div class="md:pl-6 mb-10 md:mb-28">
-    <section class="mb-5 md:mb-10">
-      <Heading size="xtra-small" stylingclasses="mb-5 md:mb-10">Order Summary</Heading>
+  <div class="md:pl-6 mb-btm-mobi md:mb-btm-desk">
+    <section class="mb-m md:mb-xl">
+      <Heading size="xtra-small" stylingclasses="mb-m md:mb-xl">Order Summary</Heading>
 
       <div class="text-primary-50 font-lora pb-6 leading-relaxed">
         <p id="summary-3days">3 Days Ticket: 0 × 900 DKK</p>
-        <p id="summary-child" class="mb-5 md:mb-10">Child Ticket: 0 × 400 DKK</p>
+        <p id="summary-child" class="mb-m md:mb-xl">Child Ticket: 0 × 400 DKK</p>
         <hr class="border-t border-primary-50 pb-2" />
         <p id="summary-total" class="font-bold text-xl font-montserrat text-primary-500">Total: 0 DKK</p>
       </div>
