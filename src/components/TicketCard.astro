@@ -1,8 +1,8 @@
 ---
 import Button from "./Button.astro";
-import Heading from "./Heading.astro";
 import Bodytext from "./Bodytext.astro";
-const {title, description, price, buttonText,} = Astro.props;
+import Heading from "./Heading.astro";
+const { title, description, price, buttonText } = Astro.props;
 ---
 
 <div class="p-10 h-70 md:h-90 bg-neutral-50/50 overflow-hidden">
@@ -18,7 +18,7 @@ const {title, description, price, buttonText,} = Astro.props;
     {price}
   </Bodytext>  
 
-  <a href="/billetformular">
+  <a href="/step1">
     <Button variant="filled-primary" size="mobile-regular md:desktop-regular">
       {buttonText}
     </Button>
