@@ -49,6 +49,15 @@
   --rounded-lg: 8px;
   --rounded-xl: 12px;
 
+  /* border size */
+  --border: 1px;
+
+  /* margin */
+  --margin-btm-desk: 80px;
+  --margin-btm-mobi: 40px;
+  --margin-grid-desk: 48px;
+  --margin-grid-mobi: 24px;
+
   /* spaceing */
   --spaceing-px: 1px;
   --spaceing-0-5: 0px;
@@ -84,9 +93,6 @@
   --spaceing-72: 288px;
   --spaceing-80: 320px;
   --spaceing-96: 384px;
-
-  /* border size */
-  --border: 1px;
 
   /* effects */
   --depth: 1;
